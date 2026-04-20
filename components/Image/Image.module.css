@@ -1,9 +1,4 @@
 /* Image component styles */
-
-.aspectRatioContainer {
-  overflow: hidden;
-}
-
 .imageContent {
   max-width: 100%;
   object-fit: cover;

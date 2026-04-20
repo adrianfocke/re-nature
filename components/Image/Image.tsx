@@ -1,4 +1,4 @@
-import { AspectRatio, Flex, Box } from '@radix-ui/themes';
+import { AspectRatio, Flex, Box, Card } from '@radix-ui/themes';
 import NextImage from 'next/image';
 import { aspectRatioMap } from '../../tina/templating/granular-fields';
 import { tinaField } from 'tinacms/dist/react';
@@ -9,36 +9,23 @@ import { findBreakpointValue } from '../../tina/templating/special-fields';
 import styles from './Image.module.css';
 import { LinkWrapper } from '../helpers';
 import config from '../../utils/config';
-import type { ExtraProps } from '../types';
 
-export default function Component(
-  props: PageBlocksImage & { extraProps?: ExtraProps },
-) {
+export default function Component(props: PageBlocksImage) {
   const breakpoint = useBreakpoint();
   const aspectRatio = findBreakpointValue(breakpoint, 'aspectRatio');
 
-  const isExternalLink = props.content?.link?.startsWith('http');
-
   const content = (
     <AspectRatio
-      data-tina-field={
-        props.extraProps?.tinaFieldDisabled
-          ? undefined
-          : tinaField(props.content ?? props)
-      }
+      data-tina-field={tinaField(props.content ?? props)}
       ratio={aspectRatioMap[props.settings?.[aspectRatio]] ?? 16 / 9}
       className={styles.aspectRatioContainer}
-      style={{
-        borderRadius: config.layout.borderRadius,
-        boxShadow: config.layout.boxShadow,
-        ...props.extraProps?.styles,
-      }}
+      style={{ overflow: 'hidden', borderRadius: config.layout.radiusVar, boxShadow: config.layout.boxShadow }}
     >
       <NextImage
         src={
           props.content?.image !== undefined &&
-          props.content?.image !== null &&
-          props.content?.image !== ''
+            props.content?.image !== null &&
+            props.content?.image !== ''
             ? props.content.image
             : '/uploads/placeholders/gradient.jpg'
         }
@@ -51,20 +38,20 @@ export default function Component(
       />
       <Flex
         direction={'column'}
-        style={{
-          position: 'absolute',
-          inset: 0,
-          zIndex: 10,
-        }}
+        className={styles.overlayContainer}
         justify={'start'}
       >
-        {props.content?.blocks && (
-          <Box m={config.layout.padding} width={'35%'}>
+        {props.content?.blocks ? <Box pl={config.layout.padding} p={props.content?.blocks.length > 1 ? config.layout.padding : '0'} maxWidth={"400px"} width={"max-content"}>
+          {props.content?.blocks.length > 1 ? <Card style={{ boxShadow: config.layout.boxShadow }}>
             {props.content?.blocks?.map((block, j) => {
               return renderBlocks(block, j);
             })}
-          </Box>
-        )}
+          </Card> : props.content?.blocks?.map((block, j) => {
+            return renderBlocks(block, j);
+          })}
+
+        </Box> : ""}
+
       </Flex>
     </AspectRatio>
   );

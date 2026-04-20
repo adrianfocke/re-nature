@@ -6,8 +6,6 @@ import { languages, type Language } from '../../tina/templating/special-fields';
 import type { FooterQuery } from '../../tina/__generated__/types';
 import Text from '../Text/Text';
 import config from '../../utils/config';
-import { GlobeIcon } from '@radix-ui/react-icons';
-import Image from '../Image/Image';
 
 const languageLabels: Record<Language, string> = {
   de: 'Deutsch',
@@ -25,59 +23,44 @@ export default function Footer(props: FooterQuery['footer']) {
   };
 
   return (
-    <Container pb={config.layout.padding}>
-      <Image
-        content={{ image: '' }}
-        settings={{
-          mb: '0',
-          aspectRatio_initial: '7/1',
-          aspectRatio_xs: '7/1',
-          aspectRatio_sm: '7/1',
-          aspectRatio_md: '7/1',
-          aspectRatio_lg: '7/1',
-          aspectRatio_xl: '7/1',
-        }}
-        extraProps={{
-          styles: {
-            borderBottomLeftRadius: '0',
-            borderBottomRightRadius: '0',
-          },
-          tinaFieldDisabled: true,
-        }}
-      />
-
+    <Container
+      mt={"9"}
+      py={config.layout.padding}
+      px={{
+        initial: config.layout.padding,
+        md: '0',
+      }}
+      style={{
+        borderTop: '1px solid var(--gray-6)',
+      }}
+    >
       <Flex
-        style={{
-          border: '1px solid var(--gray-6)',
-          borderTop: 'none',
-          borderRadius: config.layout.borderRadius,
-          borderTopLeftRadius: '0',
-          borderTopRightRadius: '0',
-        }}
-        justify={'between'}
-        p={config.layout.padding}
+        gap={{ initial: '0', md: config.layout.padding }}
+        justify={"between"}
       >
-        <Flex align={'center'} direction={'row'} gap={config.layout.padding}>
+        <Flex
+          align={'center'}
+          display={{ initial: 'none', md: 'flex' }}
+          direction={'row'}
+          gap={config.layout.padding}
+        >
           {props.links?.map((link, index) => {
             return <Text key={index} {...(link as any)} />;
           })}
         </Flex>
 
-        <Flex>
+        <Flex justify={'end'}>
           <Select.Root value={language} onValueChange={handleLanguageChange}>
             <Select.Trigger
               aria-label='Select language'
               style={{
-                borderRadius: 'var(--radius-6)',
+                borderRadius: config.layout.radiusVar,
               }}
             />
             <Select.Content>
               {languages.map((lang) => (
                 <Select.Item key={lang} value={lang}>
-                  <Flex align={'center'} gap={'1'}>
-                    <GlobeIcon />
-                    {languageLabels[lang]}
-                  </Flex>
+                  {languageLabels[lang]}
                 </Select.Item>
               ))}
             </Select.Content>

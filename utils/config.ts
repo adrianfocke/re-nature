@@ -13,7 +13,6 @@ export default {
     ],
   },
   layout: {
-    boxShadow: 'var(--shadow-4)',
     borderRadius: 'var(--radius-4)',
     padding: '4',
     gridColumns: {
@@ -21,6 +20,7 @@ export default {
       md: '2',
     },
     radius: 'full',
+    radiusVar: 'var(--radius-4)',
     textSize: {
       initial: '4',
       md: '5',
@@ -31,6 +31,7 @@ export default {
       lg: '7',
       xl: '7',
     },
+    boxShadow: 'var(--shadow-3)',
   },
   tina: {
     language: 'de' as Language,

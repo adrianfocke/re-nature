@@ -15,18 +15,19 @@ import { tinaField } from 'tinacms/dist/react';
 
 export default function Navigation(props: NavigationQuery['navigation']) {
   return (
-    <Container>
+    <Container
+      py={config.layout.padding}
+      px={{
+        initial: config.layout.padding,
+        md: '0',
+      }}
+      style={{
+        borderBottom: '1px solid var(--gray-6)',
+      }}
+    >
       <Flex
-        mt={config.layout.padding}
-        style={{
-          border: '1px solid var(--gray-6)',
-          borderRadius: config.layout.borderRadius,
-          borderBottomWidth: '10px',
-          borderImage: 'src("../public/uploads/placeholders/gradient.jpg")',
-          boxShadow: config.layout.boxShadow,
-        }}
-        justify={'between'}
-        p={config.layout.padding}
+      justify={"between"}
+        gap={{ initial: '0', md: config.layout.padding }}
       >
         <Flex justify={'between'}>
           <Link
@@ -65,21 +66,14 @@ export default function Navigation(props: NavigationQuery['navigation']) {
         </Flex>
 
         <Flex
-          gap={config.layout.padding}
           display={{ initial: 'none', md: 'flex' }}
           direction={'row'}
           justify={'between'}
           align={'center'}
-          style={{ textTransform: 'uppercase' }}
+          gap={config.layout.padding}
         >
           {props.links?.map((link, index) => {
-            return (
-              <Text
-                key={index}
-                {...(link as any)}
-                extraProps={{ tinaFieldDisabled: true }}
-              />
-            );
+            return <Text key={index} {...(link as any)} />;
           })}
         </Flex>
       </Flex>
