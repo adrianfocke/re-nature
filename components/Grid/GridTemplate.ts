@@ -1,83 +1,83 @@
-import type { Template } from "tinacms";
-import ImageTemplate from "../Image/ImageTemplate";
+import type { Template } from 'tinacms';
+import ImageTemplate from '../Image/ImageTemplate';
 import {
-  ColumnsField,
-  ExtraMarginBottomField,
-  GapField,
-  HasContainerField,
-  IsCardField,
-  MarginXField,
-  MarginYField,
-  PaddingXField,
-  PaddingYField,
-} from "../../tina/templating/granular-fields";
-import HeadingTemplate from "../Heading/HeadingTemplate";
-import TextTemplate from "../Text/TextTemplate";
-import ButtonTemplate from "../Button/ButtonTemplate";
-import { createResponsiveField } from "../../tina/templating/special-fields";
-import SlideshowTemplate from "../Slideshow/SlideshowTemplate";
-import CallToActionTemplate from "../CallToAction/CallToActionTemplate";
+  GridColumnSpanField,
+  MarginBottomField,
+  MarginTopField,
+} from '../../tina/templating/granular-fields';
+import HeadingTemplate from '../Heading/HeadingTemplate';
+import TextTemplate from '../Text/TextTemplate';
+import ButtonTemplate from '../Button/ButtonTemplate';
+import SlideshowTemplate from '../Slideshow/SlideshowTemplate';
+import CallToActionTemplate from '../CallToAction/CallToActionTemplate';
+import config from '../../utils/config';
+import AccordionTemplate from '../Accordion/AccordionTemplate';
+
+const label = {
+  grid: {
+    en: 'Grid',
+    de: 'Raster',
+  },
+  gridItems: {
+    en: 'Grid items',
+    de: 'Raster Elemente',
+
+    blocks: {
+      en: 'Content',
+      de: 'Inhalt',
+    },
+  },
+};
 
 export default {
-  name: "Grid",
-  label: "Grid",
+  name: 'Grid',
+  label: label.grid[config.tina.language],
   fields: [
     {
-      name: "content",
-      label: "Content",
-      type: "object",
-      fields: [
-        {
-          name: "items",
-          label: "Grid Items",
-          type: "object",
-          list: true,
-          fields: [
-            {
-              name: "blocks",
-              label: "Content Blocks",
-              type: "object",
-              list: true,
-              templates: [
-                ButtonTemplate,
-                HeadingTemplate,
-                ImageTemplate,
-                SlideshowTemplate,
-                TextTemplate,
-                CallToActionTemplate,
-              ],
-            },
-          ],
-          ui: {
-            itemProps: (item) => {
-              console.log("Grid item:", item);
-              return {
-                label: `${item.blocks?.[0]?._template} ${
-                  item.blocks?.length > 1
-                    ? `and ${item.blocks?.length - 1} more`
-                    : ""
-                }`,
-              };
-            },
-          },
-        },
-      ],
+      name: 'settings',
+      label: `${label.grid[config.tina.language]} Settings`,
+      type: 'object',
+      fields: [MarginTopField, MarginBottomField],
     },
     {
-      name: "settings",
-      label: "Settings",
-      type: "object",
+      name: 'items',
+      label: label.gridItems[config.tina.language],
+      type: 'object',
+      list: true,
       fields: [
-        IsCardField,
-        HasContainerField,
-        ...createResponsiveField(GapField),
-        ...createResponsiveField(ColumnsField),
-        MarginXField,
-        MarginYField,
-        ExtraMarginBottomField,
-        PaddingXField,
-        PaddingYField,
+        {
+          name: 'settings',
+          label: `${label.gridItems.blocks[config.tina.language]} Settings`,
+          type: 'object',
+          fields: [GridColumnSpanField],
+        },
+        {
+          name: 'blocks',
+          label: label.gridItems.blocks[config.tina.language],
+          type: 'object',
+          list: true,
+          templates: [
+            AccordionTemplate,
+            ButtonTemplate,
+            HeadingTemplate,
+            ImageTemplate,
+            SlideshowTemplate,
+            TextTemplate,
+            CallToActionTemplate,
+          ],
+        },
       ],
+      ui: {
+        itemProps: (item) => {
+          return {
+            label: `${item.blocks?.[0]?._template} ${
+              item.blocks?.length > 1
+                ? `and ${item.blocks?.length - 1} more`
+                : ''
+            }`,
+          };
+        },
+      },
     },
   ],
 } as Template;

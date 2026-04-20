@@ -1,54 +1,22 @@
-import type { Metadata } from "next";
-import { cookies } from "next/headers";
-import client from "../../../tina/__generated__/client";
-import type { GenerateMetadataProps } from "../../../tina/types";
-import ClientPage from "./client-page";
-import { findIntlValue } from "../../../tina/templating/special-fields";
+import { cookies } from 'next/headers';
+import client from '../../../tina/__generated__/client';
+import type { GenerateMetadataProps } from '../../../tina/types';
+import ClientPage from './client-page';
+import { generateItemMetadata } from '../../../utils/generateCollectionMetadata';
 
 export async function generateStaticParams() {
-  const pages = await client.queries.storyConnection();
-  const paths = pages.data?.storyConnection?.edges?.map((edge) => ({
+  const pages = await client.queries.projectConnection();
+  const paths = pages.data?.projectConnection?.edges?.map((edge) => ({
     filename: edge?.node?._sys.breadcrumbs,
   }));
 
   return paths || [];
 }
 
-
-export async function generateMetadata({
-  params,
-}: GenerateMetadataProps): Promise<Metadata> {
-  const language = (await cookies()).get("language")?.value ?? "en";
-
+export async function generateMetadata({ params }: GenerateMetadataProps) {
+  const language = (await cookies()).get('language')?.value ?? 'en';
   const title = (await params).filename[0];
-
-  const config = await client.queries.config({
-    relativePath: `config.json`,
-  });
-
-  const page = await client.queries.story({
-    relativePath: `${title}.json`,
-  });
-
-  const seo = findIntlValue(language as any, "seo");
-
-  const pageTitle =
-    page.data.story?.[seo]?.title ?? title[0].toUpperCase() + title.slice(1);
-
-  const description = page.data.story?.[seo]?.metaDescription;
-
-  return {
-    title: `${pageTitle} | ${config.data.config?.applicationName}`,
-    description: description,
-    applicationName: config.data.config?.applicationName,
-    authors: config.data.config?.authors?.map((author) => ({
-      name: author?.name || "",
-      url: author?.url || "",
-    })),
-    keywords: page.data.story?.[seo]?.metaKeywords?.map((item, index) =>
-      index === 0 ? item : ` ${item}`
-    ),
-  };
+  return generateItemMetadata(title, language, 'story');
 }
 
 export default async function Page(props: {
@@ -56,9 +24,9 @@ export default async function Page(props: {
 }) {
   const params = await props.params;
   const cookieStore = await cookies();
-  const language = cookieStore.get("language")?.value ?? "en";
+  const language = cookieStore.get('language')?.value ?? 'en';
 
-  const data = await client.queries.storyAndNavigation({
+  const data = await client.queries.projectAndNavigation({
     relativePath: `${params.filename}.json`,
   });
 

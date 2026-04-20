@@ -1,13 +1,13 @@
-import type { MetadataRoute } from "next";
-import project from "../project";
+import type { MetadataRoute } from 'next';
+import config from '../utils/config';
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
-      userAgent: "*",
-      allow: "/",
-      disallow: "/admin/",
+      userAgent: '*',
+      allow: '/',
+      disallow: '/admin/',
     },
-    sitemap: `https://www.${project.url}/sitemap.xml`,
+    sitemap: `https://www.${config.project.url}/sitemap.xml`,
   };
 }

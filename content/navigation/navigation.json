@@ -20,40 +20,26 @@
       }
     ]
   },
+  "logoImage": "/uploads/portrait.jpg",
+  "settings": {},
   "logo": {
+    "logoImage": "",
     "link": "/",
-    "content": {
-      "text_de": "Adrian Focke",
-      "text_en": "Adrian Focke"
-    },
-    "settings": {
-      "marginBottom": "0"
-    }
+    "text_de": "Adrian Focke",
+    "text_en": "Adrian Focke"
   },
   "links": [
     {
+      "settings": {},
       "link": "/about",
-      "content": {
-        "text_de": "Über Mich",
-        "text_en": "About Me"
-      },
-      "settings": {
-        "marginBottom": "0"
-      }
+      "text_de": "Über mich",
+      "text_en": "About me"
     },
     {
+      "settings": {},
       "link": "/stories",
-      "content": {
-        "text_de": "Stories",
-        "text_en": "Stories"
-      },
-      "settings": {
-        "marginBottom": "0"
-      }
+      "text_de": "Stories",
+      "text_en": "Stories"
     }
-  ],
-  "settings": {
-    "paddingX": "4",
-    "paddingY": "4"
-  }
+  ]
 }

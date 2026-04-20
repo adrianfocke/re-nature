@@ -1,174 +1,142 @@
-import type { Template } from "tinacms";
+import type { Template } from 'tinacms';
+import config from '../../utils/config';
 
 const radixUnitsPositive = [
-  "0",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
+  '0',
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
+  '6',
+  '7',
+  '8',
+  '9',
 ] as const;
 const radixUnits = [
   ...radixUnitsPositive,
-  "0",
-  "-1",
-  "-2",
-  "-3",
-  "-4",
-  "-5",
-  "-6",
-  "-7",
-  "-8",
-  "-9",
+  '0',
+  '-1',
+  '-2',
+  '-3',
+  '-4',
+  '-5',
+  '-6',
+  '-7',
+  '-8',
+  '-9',
 ] as const;
 
 export const aspectRatios = [
-  "16/9",
-  "4/3",
-  "1/1",
-  "3/4",
-  "5/1",
-  "4/1",
-  "3/1",
-  "2/1",
+  '16/9',
+  '4/3',
+  '1/1',
+  '3/4',
+  '7/1',
+  '5/1',
+  '4/1',
+  '3/1',
+  '2/1',
 ] as const;
 
 export type AspectRatio = (typeof aspectRatios)[number];
 
 export const aspectRatioMap: Record<AspectRatio, number> = {
-  "16/9": 16 / 9,
-  "4/3": 4 / 3,
-  "1/1": 1,
-  "3/4": 3 / 4,
-  "5/1": 5 / 1,
-  "4/1": 4 / 1,
-  "3/1": 3 / 1,
-  "2/1": 2 / 1,
+  '16/9': 16 / 9,
+  '4/3': 4 / 3,
+  '1/1': 1,
+  '3/4': 3 / 4,
+  '7/1': 7 / 1,
+  '5/1': 5 / 1,
+  '4/1': 4 / 1,
+  '3/1': 3 / 1,
+  '2/1': 2 / 1,
 };
 
-export const AspectRatioField: Template["fields"][number] = {
-  name: "aspectRatio",
-  label: "Aspect Ratio",
-  type: "string",
+const aspectRatioFieldLabel = {
+  en: 'Aspect Ratio',
+  de: 'Seitenverhältnis',
+};
+export const AspectRatioField: Template['fields'][number] = {
+  name: 'aspectRatio',
+  label: aspectRatioFieldLabel[config.tina.language],
+  type: 'string',
   options: [...aspectRatios],
 };
 
-export const AlignField: Template["fields"][number] = {
-  name: "align",
-  label: "Align",
-  type: "string",
-  options: ["left", "center", "right"],
+const seoFieldLabel = {
+  title: {
+    en: 'Title',
+    de: 'Titel',
+  },
+  metaDescription: {
+    en: 'Meta description',
+    de: 'Meta Beschreibung',
+  },
+  metaKeywords: {
+    en: 'Meta keywords',
+    de: 'Meta Schlüsselwörter',
+  },
 };
-
-export const MarginXField: Template["fields"][number] = {
-  name: "marginX",
-  label: "Horizontal Margin Size",
-  type: "string",
-  options: [...radixUnits],
+const seoFieldDescription = {
+  metaDescription: {
+    en: 'Short summary of the content of the page. Displayed in search engine results.',
+    de: 'Kurze Zusammenfassung des Seiteninhalts. Wird in Suchergebnissen von Suchmaschinen angezeigt.',
+  },
+  metaKeywords: {
+    en: 'Specific keywords for search engine',
+    de: 'Spezifische Schlüsselwörter für die Suchmaschine',
+  },
 };
-
-export const ExtraMarginBottomField: Template["fields"][number] = {
-  name: "marginBottom",
-  label: "Alternating Bottom Margin Size",
-  type: "string",
-  options: [...radixUnits],
-};
-
-export const MarginYField: Template["fields"][number] = {
-  name: "marginY",
-  label: "Vertical Margin Size",
-  type: "string",
-  options: [...radixUnits],
-};
-
-export const PaddingXField: Template["fields"][number] = {
-  name: "paddingX",
-  label: "Horizontal Padding Size",
-  type: "string",
-  options: [...radixUnits],
-};
-
-export const PaddingYField: Template["fields"][number] = {
-  name: "paddingY",
-  label: "Vertical Padding Size",
-  type: "string",
-  options: [...radixUnits],
-};
-
-export const ExtraPaddingWhenInGridField: Template["fields"][number] = {
-  name: "extraPaddingWhenInGrid",
-  label: "Extra Padding When In Grid",
-  type: "boolean",
-};
-
-export const GapField: Template["fields"][number] = {
-  name: "gap",
-  label: "Gap Size",
-  type: "string",
-  options: [...radixUnitsPositive],
-};
-
-export const TextSizeField: Template["fields"][number] = {
-  name: "textSize",
-  label: "Text Size",
-  type: "string",
-  options: [...radixUnitsPositive],
-};
-
-export const colorMap: Record<(typeof colors)[number], string> = {
-  gray: "var(--gray-12)",
-  white: "var(--gray-1)",
-};
-
-const colors = ["gray", "white"] as const;
-export const TextColorField: Template["fields"][number] = {
-  name: "textColor",
-  label: "Text Color",
-  type: "string",
-  options: [...colors],
-};
-
-export const SEOField: Template["fields"][number] = {
-  name: "seo",
-  label: "SEO",
-  type: "object",
+export const SEOField: Template['fields'][number] = {
+  name: 'seo',
+  label: 'SEO',
+  type: 'object',
   fields: [
     {
-      name: "title",
-      label: "Title",
-      type: "string",
+      name: 'title',
+      label: seoFieldLabel.title[config.tina.language],
+      type: 'string',
     },
     {
-      name: "metaDescription",
-      label: "Meta desciption",
-      type: "string",
+      name: 'metaDescription',
+      label: seoFieldLabel.metaDescription[config.tina.language],
+      type: 'string',
       ui: {
-        component: "textarea",
-        description: "Descriptive information for better web search listing",
+        component: 'textarea',
+        description: seoFieldDescription.metaDescription[config.tina.language],
         validate: (value) => {
           if (value?.length > 165) {
-            return "Meta desciption should not be longer than 165 characters";
+            return 'Meta desciption should not be longer than 165 characters';
           }
         },
       },
     },
     {
-      name: "metaKeywords",
-      label: "Meta keywords",
-      type: "string",
+      name: 'metaKeywords',
+      label: 'Meta keywords',
+      type: 'string',
       list: true,
+      description: seoFieldDescription.metaKeywords[config.tina.language],
     },
   ],
 };
 
-export const FilenameField: Template["fields"][number] = {
-  name: "name",
-  label: "Name",
-  type: "string",
+const textSizeFieldLabel = {
+  en: 'Text Size',
+  de: 'Textgröße',
+};
+export const TextSizeField: Template['fields'][number] = {
+  name: 'textSize',
+  label: textSizeFieldLabel[config.tina.language],
+  type: 'string',
+  options: [...radixUnitsPositive],
+};
+
+export const FilenameField: Template['fields'][number] = {
+  name: 'name',
+  label: 'Name',
+  type: 'string',
   required: true,
   ui: {
     validate: (value) => {
@@ -176,73 +144,56 @@ export const FilenameField: Template["fields"][number] = {
       const regex = /^[A-Za-z0-9äöüÄÖÜß\- ]+$/;
 
       if (!value) {
-        return "Value must be defined";
+        return 'Value must be defined';
       }
 
       if (!regex.test(value)) {
-        return "Allowed values: letters, numbers, umlaute, blank and hyphen";
+        return 'Allowed values: letters, numbers, umlaute, blank and hyphen';
       }
     },
   },
 };
 
-export const LinkField: Template["fields"][number] = {
-  name: "link",
-  label: "Link (optional)",
-  type: "string",
-  description: "Fill this field to wrap content with a link",
+const linkFieldDescription = {
+  en: 'Add a link here to link the text.',
+  de: 'Fügen Sie hier einen Link hinzu, um den Text zu verlinken.',
+};
+export const LinkField: Template['fields'][number] = {
+  name: 'link',
+  label: 'Link (optional)',
+  type: 'string',
+  description: linkFieldDescription[config.tina.language],
 };
 
-export const HasContainerField: Template["fields"][number] = {
-  name: "hasContainer",
-  label: "Wrap Component in Container",
-  type: "boolean",
+const gridColumnSpanFieldLabel = {
+  en: 'Grid column span',
+  de: 'Raster Spaltenbreite',
 };
-
-export const IDField: Template["fields"][number] = {
-  name: "id",
-  label: "ID",
-  type: "string",
-  description: "Add an ID to this component for linking or accessibility",
-};
-
-export const FontField: Template["fields"][number] = {
-  name: "font",
-  label: "Font",
-  type: "string",
-  options: ["serif", "sans"],
-};
-
-export const BlocksPositionField: Template["fields"][number] = {
-  name: "blocksPosition",
-  label: "Blocks Position",
-  type: "string",
-  options: ["start", "center"],
-};
-
-export const RadiusField: Template["fields"][number] = {
-  name: "radius",
-  label: "Radius",
-  type: "string",
-  options: ["full", "large", "medium", "small", "none"],
-};
-
-export const ColumnsField: Template["fields"][number] = {
-  name: "columns",
-  label: "Columns",
-  type: "string",
+export const GridColumnSpanField: Template['fields'][number] = {
+  name: 'gridColumnSpan',
+  label: gridColumnSpanFieldLabel[config.tina.language],
+  type: 'string',
   options: [...radixUnitsPositive],
 };
 
-export const DirectionField: Template["fields"][number] = {
-  name: "direction",
-  label: "Direction",
-  type: "string",
-  options: ["row", "column", "row-reverse", "column-reverse"],
+const marginTopFieldLabel = {
+  en: 'Top margin',
+  de: 'Abstand oben',
+};
+export const MarginTopField: Template['fields'][number] = {
+  name: 'mt',
+  label: marginTopFieldLabel[config.tina.language],
+  type: 'string',
+  options: [...radixUnits],
 };
 
-export const IsCardField: Template["fields"][number] = {
-  name: "isCard",
-  label: "Wrap Component in Card",
-  type: "boolean",
+const marginBottomFieldLabel = {
+  en: 'Bottom margin',
+  de: 'Abstand unten',
+};
+export const MarginBottomField: Template['fields'][number] = {
+  name: 'mb',
+  label: marginBottomFieldLabel[config.tina.language],
+  type: 'string',
+  options: [...radixUnits],
 };
