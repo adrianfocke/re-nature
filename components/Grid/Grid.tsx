@@ -18,11 +18,11 @@ export default function Component(props: PageBlocksGrid) {
       }}
     >
       {edit && <EditHelper {...props} />}
-      <Grid columns={config.layout.gridColumns} gap={config.layout.padding}>
+      <Grid columns={{ initial: config.layout.gridColumns.initial, md: config.layout.gridColumns.md }} gap={config.layout.padding}>
         {props.items?.map((item, index) => (
           <Box
             key={index}
-            gridColumn={`span ${item?.settings?.gridColumnSpan}`}
+            gridColumn={{ initial: 'span 1', md: `span ${item?.settings?.gridColumnSpan}` }}
             data-tina-field={tinaField(item)}
           >
             {item?.blocks?.map((block, index) => {

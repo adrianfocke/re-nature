@@ -12,13 +12,17 @@ seo: {}
 name: Home
 seo_de:
   title: Startseite
-  metaDescription: Ich bin Webdeveloper und hier findest du alle Infos zu mir und was ich mache.
+  metaDescription: >-
+    Ich bin Webdeveloper und hier findest du alle Infos zu mir und was ich
+    mache.
   metaKeywords:
     - webseite
     - wien
 seo_en:
   title: Start
-  metaDescription: 'I am a web developer, and here you can find all the information about me and what I do.'
+  metaDescription: >-
+    I am a web developer, and here you can find all the information about me and
+    what I do.
   metaKeywords:
     - websites
     - wien
@@ -34,10 +38,15 @@ blocks:
             blocks:
               - text_de: Ehrliches Design für mutige Menschen.
                 _template: Heading
-              - text_de: |-
-                  Hi, mein Name ist Adrian und ich bin Developer und Digital Consultant in Wien. Durch meine Arbeit kann ich Menschen digital erheben und das erfüllt mich.
+              - text_de: >-
+                  Hi, mein Name ist Adrian und ich bin Developer und Digital
+                  Consultant in Wien. Durch meine Arbeit kann ich Menschen
+                  digital erheben und das erfüllt mich.
 
-                  Außerdem mache ich noch einige andere Dinge: ich bin Masseur, Yogalehrer und halte unterschiedliche Formate zum Thema Männlichkeit.
+
+                  Außerdem mache ich noch einige andere Dinge: ich bin Masseur,
+                  Yogalehrer und halte unterschiedliche Formate zum Thema
+                  Männlichkeit.
                 _template: Text
               - link: /about
                 text_de: Mehr über mich
@@ -45,10 +54,12 @@ blocks:
             _template: Call_To_Action
       - blocks:
           - content:
-              image: /uploads/portrait-3000.png
-              blurImage: /uploads/portrait-1200.png
+              image: /uploads/portrait-1200-viereck.png
+              blurImage: ''
             settings:
-              aspectRatio_sm: ''
+              aspectRatio_initial: 1/1
+              aspectRatio_xs: 1/1
+              aspectRatio_sm: 1/1
               aspectRatio_md: 1/1
               aspectRatio_lg: 1/1
               aspectRatio_xl: 1/1
@@ -60,7 +71,11 @@ blocks:
               - content:
                   image: /uploads/coco.png
                   blocks:
-                    - text_de: Om Shanti Webseite
+                    - settings:
+                        textSize_xs: ''
+                        textSize_sm: '3'
+                        textSize_md: ''
+                      text_de: Om Shanti Webseite
                       _template: Heading
                     - text_de: 'Trust the Journey: Eine maßgeschneiderte Seite für Coco.'
                       _template: Text
@@ -69,9 +84,9 @@ blocks:
                       text_de: Zu ihrer Story
                       _template: Button
                 settings:
-                  aspectRatio_initial: ''
-                  aspectRatio_xs: ''
-                  aspectRatio_sm: ''
+                  aspectRatio_initial: 3/4
+                  aspectRatio_xs: 3/4
+                  aspectRatio_sm: 3/4
                   aspectRatio_md: ''
                   aspectRatio_lg: ''
                   aspectRatio_xl: ''
@@ -79,7 +94,9 @@ blocks:
               - content:
                   image: /uploads/breath-and-growth.png
                   blocks:
-                    - text_de: 'Atme ein, atme aus'
+                    - settings:
+                        textSize_sm: '3'
+                      text_de: 'Atme ein, atme aus'
                       _template: Heading
                     - text_de: Hanna startet durch mit ihrer neuen Webseite.
                       _template: Text
@@ -88,9 +105,9 @@ blocks:
                       text_de: Zu ihrer Story
                       _template: Button
                 settings:
-                  aspectRatio_initial: ''
-                  aspectRatio_xs: ''
-                  aspectRatio_sm: ''
+                  aspectRatio_initial: 3/4
+                  aspectRatio_xs: 3/4
+                  aspectRatio_sm: 3/4
                   aspectRatio_md: ''
                   aspectRatio_lg: ''
                   aspectRatio_xl: 1/1
@@ -98,18 +115,22 @@ blocks:
               - content:
                   image: /uploads/valerie.jpg
                   blocks:
-                    - text_de: Lebendiges Theater
+                    - settings:
+                        textSize_sm: '3'
+                      text_de: Lebendiges Theater
                       _template: Heading
-                    - text_de: Valerie schafft interdisziplinäre Kunstformen und neue Erzählweisen.
+                    - text_de: >-
+                        Valerie schafft interdisziplinäre Kunstformen und neue
+                        Erzählweisen.
                       _template: Text
                     - settings:
                         variant: surface
                       text_de: Zu ihrer Story
                       _template: Button
                 settings:
-                  aspectRatio_initial: ''
-                  aspectRatio_xs: ''
-                  aspectRatio_sm: ''
+                  aspectRatio_initial: 3/4
+                  aspectRatio_xs: 3/4
+                  aspectRatio_sm: 3/4
                   aspectRatio_md: ''
                   aspectRatio_lg: ''
                   aspectRatio_xl: 1/1
@@ -124,13 +145,26 @@ blocks:
       - settings:
           gridColumnSpan: '2'
         blocks:
-          - text_de: 'Um es dir einfacher zu machen, habe ich ein paar Pakete zusammengestellt. Die Pakete ermöglichen dir deine Online-Präsenz, unabhängig von Big Tech und heimlichen Abo-Fallen. Je nach demnach was du brauchst, unterstütze ich dich im Aufbau deiner Ideen.'
+          - text_de: >-
+              Um es dir einfacher zu machen, habe ich ein paar Pakete
+              zusammengestellt. Die Pakete ermöglichen dir deine Online-Präsenz,
+              unabhängig von Big Tech und heimlichen Abo-Fallen. Je nach demnach
+              was du brauchst, unterstütze ich dich im Aufbau deiner Ideen.
             _template: Text
       - blocks:
           - blocks:
-              - text_de: Volle Freiheit
+              - settings:
+                  textSize_sm: ''
+                  textSize_lg: ''
+                  textSize_xl: ''
+                text_de: Volle Freiheit
                 _template: Heading
-              - text_de: 'Abo-freies Paket für dich und all deine Ideen: wir lassen deine perfekte Webseite entstehen. Inkludiert sind ein Design-Prozess, technische Umsetzung, Beratung zu Suchmaschinen-Optimierung (SEO), sowie Unterstützung über die Fertigstellung hinaus.'
+              - text_de: >-
+                  Abo-freies Paket für dich und all deine Ideen: wir lassen
+                  deine perfekte Webseite entstehen. Inkludiert sind ein
+                  Design-Prozess, technische Umsetzung, Beratung zu
+                  Suchmaschinen-Optimierung (SEO), sowie Unterstützung über die
+                  Fertigstellung hinaus.
                 _template: Text
               - text_de: Buchen
                 _template: Button
@@ -139,7 +173,12 @@ blocks:
           - blocks:
               - text_de: Bytes Only
                 _template: Heading
-              - text_de: 'Du kommst mit einem fertigen Design und brauchst wen der es dir technisch umsetzt und dich digital unterstützt? Ich habe das Know-How und die passende Technologie, samt intuitiver Oberfläche und einem Tech-Stack auf Basis modernster Web-Technologie.'
+              - text_de: >-
+                  Du kommst mit einem fertigen Design und brauchst wen der es
+                  dir technisch umsetzt und dich digital unterstützt? Ich habe
+                  das Know-How und die passende Technologie, samt intuitiver
+                  Oberfläche und einem Tech-Stack auf Basis modernster
+                  Web-Technologie.
                 _template: Text
               - text_de: Buchen
                 _template: Button
@@ -150,7 +189,11 @@ blocks:
             blocks:
               - text_de: Digitale Beratung
                 _template: Heading
-              - text_de: 'Ich biete 1:1 digitale Beratung für all things web an. Ich sehe darin meinen Auftrag, dich digital zu stärken und dir eine sichere Basis für deine Idee zu geben. Lass mich all das Rundherum machen und finde so mehr Fokus auf deine Expertise.'
+              - text_de: >-
+                  Ich biete 1:1 digitale Beratung für all things web an. Ich
+                  sehe darin meinen Auftrag, dich digital zu stärken und dir
+                  eine sichere Basis für deine Idee zu geben. Lass mich all das
+                  Rundherum machen und finde so mehr Fokus auf deine Expertise.
                 _template: Text
               - text_de: Buchen
                 _template: Button
@@ -161,7 +204,11 @@ blocks:
             blocks:
               - text_de: Shanti
                 _template: Heading
-              - text_de: 'Du hast einen Cause, den die Welt braucht und begrenzte finanzielle Ressourcen? Für ausgewählte Ideen arbeite ich unter speziellen Konditionen. Wie Dorothea Neff sagte: "Geld ist ein Mittel, aber das Wachstum der Seele ist unbezahlbar".'
+              - text_de: >-
+                  Du hast einen Cause, den die Welt braucht und begrenzte
+                  finanzielle Ressourcen? Für ausgewählte Ideen arbeite ich
+                  unter speziellen Konditionen. Wie Dorothea Neff sagte: "Geld
+                  ist ein Mittel, aber das Wachstum der Seele ist unbezahlbar".
                 _template: Text
               - settings:
                   variant: surface
@@ -181,16 +228,44 @@ blocks:
           - blocks:
               - title: Warum verwende ich kein Wordpress?
                 blocks:
-                  - text_de: 'Wordpress ist ein praktisches System, hat aber ein paar Schwachstellen: Viele Plugins funktionieren zwar, für eine umfassende Funktionalität muss man aber extra zahlen. Außerdem weisen die meisten Plugins einen fragwürdigen Datenschutz vor. Wordpress ist über die Jahre hinweg so sehr gewachsen, dass die Oberfläche schwer zu bedienen geworden ist. Bei mir bekommst du ein skalierbars Block-System, in dem ich dir Funktionalität spezifisch dazubaue und so einen Standard garantieren kann – wiederverwendbar, modular und einfach in der Handhabung.'
+                  - text_de: >-
+                      Wordpress ist ein praktisches System, hat aber ein paar
+                      Schwachstellen: Viele Plugins funktionieren zwar, für eine
+                      umfassende Funktionalität muss man aber extra zahlen.
+                      Außerdem weisen die meisten Plugins einen fragwürdigen
+                      Datenschutz vor. Wordpress ist über die Jahre hinweg so
+                      sehr gewachsen, dass die Oberfläche schwer zu bedienen
+                      geworden ist. Bei mir bekommst du ein skalierbars
+                      Block-System, in dem ich dir Funktionalität spezifisch
+                      dazubaue und so einen Standard garantieren kann –
+                      wiederverwendbar, modular und einfach in der Handhabung.
                     _template: Text
               - title: Kann ich eigenständig Änderungen vornehmen?
                 blocks:
-                  - text_de: 'Ja, du kannst du. Dein Content ist jederzeit von dir anpassbar und Änderungen werden sofort übernommen. Ich arbeite effizient und verwende nur Open Source Software. All meine Tools sind frei verfügbar und so können andere Developer:innen jederzeit einspringen, erweitern oder übernehmen. Wenn du also zukünftig mit anderen Menschen zusammenarbeitest, bist du unabhängig von mir. Außerdem habe ich eine weitgehende Dokumentation in meiner Codebase etabliert, um es anderen Menschen noch einfacher zu machen.'
+                  - text_de: >-
+                      Ja, du kannst du. Dein Content ist jederzeit von dir
+                      anpassbar und Änderungen werden sofort übernommen. Ich
+                      arbeite effizient und verwende nur Open Source Software.
+                      All meine Tools sind frei verfügbar und so können andere
+                      Developer:innen jederzeit einspringen, erweitern oder
+                      übernehmen. Wenn du also zukünftig mit anderen Menschen
+                      zusammenarbeitest, bist du unabhängig von mir. Außerdem
+                      habe ich eine weitgehende Dokumentation in meiner Codebase
+                      etabliert, um es anderen Menschen noch einfacher zu
+                      machen.
                     _template: Text
               - title: Wie funktioniert das mit der KI?
                 blocks:
-                  - text_de: |
-                      Ich programmiere selbst teils mithilfe von KI. Meine Arbeit besteht daraus, ein vollumfängliches Produkt entstehen zu lassen, welches Weitblick hat und dem Zeitgeist entspricht. Manches kann die KI nicht, beispielsweise netzwerken oder eine holitische Begleitung anbieten. Ich baue dir was, das wirklich zu dir und deiner Idee passt. Ferner biete ich dir präzisen technischen Support an und vermittle nachhaltiges Hosting. Du bekommst das Beste aus beiden Welten, zu einem passenden Preis.
+                  - text_de: >
+                      Ich programmiere selbst teils mithilfe von KI. Meine
+                      Arbeit besteht daraus, ein vollumfängliches Produkt
+                      entstehen zu lassen, welches Weitblick hat und dem
+                      Zeitgeist entspricht. Manches kann die KI nicht,
+                      beispielsweise netzwerken oder eine holitische Begleitung
+                      anbieten. Ich baue dir was, das wirklich zu dir und deiner
+                      Idee passt. Ferner biete ich dir präzisen technischen
+                      Support an und vermittle nachhaltiges Hosting. Du bekommst
+                      das Beste aus beiden Welten, zu einem passenden Preis.
                     _template: Text
             _template: Accordion
     _template: Grid

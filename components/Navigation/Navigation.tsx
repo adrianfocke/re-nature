@@ -26,10 +26,10 @@ export default function Navigation(props: NavigationQuery['navigation']) {
       }}
     >
       <Flex
-      justify={"between"}
+        justify={"between"}
         gap={{ initial: '0', md: config.layout.padding }}
       >
-        <Flex justify={'between'}>
+        <Flex justify={'between'} width={{initial: "100%", md: "auto"}} align={{ initial: 'center', md: 'start' }}>
           <Link
             href={'/'}
             className='no-line-height'

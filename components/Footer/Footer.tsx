@@ -40,7 +40,6 @@ export default function Footer(props: FooterQuery['footer']) {
       >
         <Flex
           align={'center'}
-          display={{ initial: 'none', md: 'flex' }}
           direction={'row'}
           gap={config.layout.padding}
         >
