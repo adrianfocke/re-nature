@@ -5,8 +5,6 @@ import {
   MarginTopField,
   MarginBottomField,
 } from '../../tina/templating/granular-fields';
-import HeadingTemplate from '../Heading/HeadingTemplate';
-import TextTemplate from '../Text/TextTemplate';
 import { createResponsiveField } from '../../tina/templating/special-fields';
 import ButtonTemplate from '../Button/ButtonTemplate';
 import CallToActionTemplate from '../CallToAction/CallToActionTemplate';
