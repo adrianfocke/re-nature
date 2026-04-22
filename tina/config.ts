@@ -10,7 +10,9 @@ const collections = [page, navigation, project, design, footer, story];
 
 export default defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  branch: 'adrian',
+  branch: process.env.NEXT_PUBLIC_TINA_BRANCH ||
+    process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF ||
+    process.env.HEAD || 'main',
   token: process.env.TINA_TOKEN,
   media: {
     tina: {
