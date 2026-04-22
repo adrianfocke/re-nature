@@ -108,11 +108,12 @@ blocks:
             _template: Slideshow
     _template: Grid
   - settings:
-      mt: '6'
+      mt: '8'
       mb: ''
     items:
       - settings:
           gridColumnSpan: ''
+          centered: true
         blocks:
           - text_de: Ehrliches Design für mutige Menschen.
             text_en: Honest design for fierce people.
@@ -131,16 +132,29 @@ blocks:
               My mission: To give a voice to the quiet ones, to seek understanding, to be honest, to travel, to create safe spaces, to recognize and question privilege, to help men* embrace their gentleness, to support Yogi:nis, and to have your back.
             _template: Text
           - settings:
-              mt: '6'
-              variant: surface
-            link: /about
-            text_de: Mehr über mich erfahren →
-            text_en: Learn more about me →
-            _template: Button
+              mt: '4'
+              direction: ''
+            items:
+              - blocks:
+                  - settings:
+                      mb: ''
+                    link: 'mailto:afocke@pm.me'
+                    text_de: Mich kontaktieren →
+                    text_en: Contact me →
+                    _template: Button
+              - blocks:
+                  - settings:
+                      variant: surface
+                    link: /about
+                    text_de: Mehr über mich erfahren →
+                    text_en: Learn more about me →
+                    _template: Button
+            _template: Flex
       - blocks:
           - content:
               image: /uploads/portrait-1200-viereck.png
             settings:
+              sizes: '(max-width: 768px) 100vw, 50vw'
               aspectRatio_initial: 1/1
               aspectRatio_xs: 1/1
               aspectRatio_sm: 1/1
@@ -150,13 +164,15 @@ blocks:
             _template: Image
     _template: Grid
   - settings:
-      mt: '6'
+      mt: '8'
     items:
-      - blocks:
+      - settings:
+          gridColumnSpan: '2'
+        blocks:
           - text_de: Meine Pakete
             text_en: My services
             _template: Heading
-          - text_de: 'Ich gestalte Webseiten unabhängig von Big Tech und heimlichen Abo-Fallen. Das sind meine Pakete:'
+          - text_de: 'Um es dir einfacher zu machen, habe ich ein paar Pakete zusammengestellt. Die Pakete ermöglichen dir deine Online-Präsenz, unabhängig von Big Tech und heimlichen Abo-Fallen. Je nach demnach was du brauchst, unterstütze ich dich im Aufbau deiner Ideen. Diese Pakete biete ich an:'
             text_en: 'I design websites free from Big Tech and hidden subscription traps. Here are my packages:'
             _template: Text
     _template: Grid
@@ -225,7 +241,7 @@ blocks:
             _template: Call_To_Action
     _template: Grid
   - settings:
-      mt: '6'
+      mt: '8'
     items:
       - settings:
           gridColumnSpan: '2'
@@ -239,7 +255,7 @@ blocks:
                   - text_de: 'Wordpress ist ein praktisches System, hat aber ein paar Schwachstellen: Viele Plugins funktionieren zwar, für eine umfassende Funktionalität muss man aber extra zahlen. Außerdem weisen die meisten Plugins einen fragwürdigen Datenschutz vor. Wordpress ist über die Jahre hinweg so sehr gewachsen, dass die Oberfläche schwer zu bedienen geworden ist. Bei mir bekommst du ein skalierbars Block-System, in dem ich dir Funktionalität spezifisch dazubaue und so einen Standard garantieren kann – wiederverwendbar, modular und einfach in der Handhabung.'
                     text_en: 'WordPress is a practical system, but it has a few weaknesses: While many plugins work, you have to pay extra for comprehensive functionality. In addition, most plugins have questionable data protection. WordPress has grown so much over the years that the interface has become difficult to use. With me, you get a scalable block system where I build in specific functionality, ensuring a consistent standard—reusable, modular, and easy to use.'
                     _template: Text
-              - title: Kann ich eigenständig Änderungen vornehmen?
+              - title: Kann ich selbst Inhalt anpassen?
                 blocks:
                   - text_de: 'Ja, du kannst du. Dein Content ist jederzeit von dir anpassbar und Änderungen werden sofort übernommen. Ich arbeite effizient und verwende nur Open Source Software. All meine Tools sind frei verfügbar und so können andere Developer:innen jederzeit einspringen, erweitern oder übernehmen. Wenn du also zukünftig mit anderen Menschen zusammenarbeitest, bist du unabhängig von mir. Außerdem habe ich eine weitgehende Dokumentation in meiner Codebase etabliert, um es anderen Menschen noch einfacher zu machen.'
                     text_en: 'Yes, you can. You can edit your content at any time, and changes are applied immediately. I work efficiently and use only open-source software. All my tools are freely available, so other developers can step in, expand, or take over at any time. That way, if you collaborate with others in the future, you won’t be dependent on me. I’ve also included extensive documentation in my codebase to make things even easier for others.'

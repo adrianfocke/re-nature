@@ -43,18 +43,6 @@ export const findBreakpointValue = (
   return `${key}_${breakpoint}`;
 };
 
-export const findResponsiveValue = (settings: any, key: string) => {
-  if (!settings) return undefined;
-  return {
-    initial: settings?.[`${key}_initial`],
-    xs: settings?.[`${key}_xs`],
-    sm: settings?.[`${key}_sm`],
-    md: settings?.[`${key}_md`],
-    lg: settings?.[`${key}_lg`],
-    xl: settings?.[`${key}_xl`],
-  };
-};
-
 export const createResponsiveField = (field: Template['fields'][number]) => {
   return radixResponsiveSizes.map((size) => ({
     ...field,

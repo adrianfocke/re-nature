@@ -1,4 +1,131 @@
 {
   "name": "Valerie",
-  "image": "/uploads/valerie.jpg"
+  "seo_de": {
+    "title": "Valerie Story",
+    "metaDescription": "Die Story von Valerie: interdisziplinäre Kunst, klare Kommunikation und eine Website mit Haltung.",
+    "metaKeywords": [
+      "Valerie",
+      "Story",
+      "Kunst",
+      "Website",
+      "Wien"
+    ]
+  },
+  "seo_en": {
+    "title": "Valerie Story",
+    "metaDescription": "Valerie's story: interdisciplinary art, clear communication, and a website with attitude.",
+    "metaKeywords": [
+      "Valerie",
+      "story",
+      "art",
+      "website",
+      "Vienna"
+    ]
+  },
+  "image": "/uploads/valerie.jpg",
+  "blocks": [
+    {
+      "settings": {
+        "mt": "",
+        "mb": "6",
+        "hasBackground": true
+      },
+      "items": [
+        {
+          "settings": {
+            "gridColumnSpan": "2"
+          },
+          "blocks": [
+            {
+              "settings": {
+                "mt": "6",
+                "mb": "6"
+              },
+              "text_de": "Valerie entwickelt interdisziplinaere Formate zwischen Theater, Performance und Bildung. Die Website sollte diese Vielschichtigkeit klar, mutig und einladend transportieren.",
+              "text_en": "Valerie develops interdisciplinary formats across theatre, performance, and education. The website needed to communicate this complexity in a clear, bold, and inviting way.",
+              "_template": "Heading"
+            },
+            {
+              "settings": {
+                "mb": "6"
+              },
+              "text_de": "Valerie, Kuenstlerin und Projektentwicklerin in Wien",
+              "text_en": "Valerie, artist and project developer in Vienna",
+              "_template": "Text"
+            }
+          ]
+        }
+      ],
+      "_template": "Grid"
+    },
+    {
+      "items": [
+        {
+          "settings": {
+            "gridColumnSpan": "2"
+          },
+          "blocks": [
+            {
+              "content": {
+                "image": "/uploads/valerie.jpg"
+              },
+              "settings": {
+                "mb": "6"
+              },
+              "_template": "Image"
+            }
+          ]
+        }
+      ],
+      "_template": "Grid"
+    },
+    {
+      "settings": {
+        "mt": "6"
+      },
+      "items": [
+        {
+          "settings": {
+            "gridColumnSpan": "1"
+          },
+          "blocks": [
+            {
+              "text_de": "Der Fokus lag darauf, Valeries kuenstlerische Handschrift digital zu uebersetzen, ohne die Inhalte zu ueberladen. Gemeinsam haben wir eine Struktur entwickelt, die Projekte schnell erklaert und gleichzeitig Raum fuer Tiefe laesst.\n\nIn der Umsetzung wurde besonders auf Lesbarkeit, klare Navigation und flexible Content-Pflege geachtet. So kann die Seite mit neuen Arbeiten mitwachsen und bleibt fuer unterschiedliche Zielgruppen gut zugaenglich.",
+              "text_en": "The focus was to translate Valerie's artistic signature into a digital format without overwhelming the content. Together, we developed a structure that explains projects quickly while still leaving room for depth.\n\nImplementation focused on readability, clear navigation, and flexible content maintenance. This allows the site to grow with new work and remain accessible to different audiences.",
+              "_template": "Text"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "gridColumnSpan": ""
+          },
+          "blocks": [
+            {
+              "blocks": [
+                {
+                  "text_de": "Überzeugt?",
+                  "text_en": "Convinced?",
+                  "_template": "Heading"
+                },
+                {
+                  "text_de": "Coco hat das Paket \"Bytes only\" gewählt. Vielleicht ist das auch Dein passendes Paket?",
+                  "text_en": "Coco chose the \"Bytes Only\" plan. Maybe that's the right plan for you, too?",
+                  "_template": "Text"
+                },
+                {
+                  "link": "mailto:afocke@pm.me",
+                  "text_de": "Mich kontaktieren →",
+                  "text_en": "Contact me →",
+                  "_template": "Button"
+                }
+              ],
+              "_template": "Call_To_Action"
+            }
+          ]
+        }
+      ],
+      "_template": "Grid"
+    }
+  ]
 }

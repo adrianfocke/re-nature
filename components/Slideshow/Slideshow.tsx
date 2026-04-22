@@ -21,6 +21,9 @@ export default function Component(props: PageBlocksSlideshow) {
     nextSlideTimeout: Number((props.settings as any)?.nextSlideTimeout) || null,
   });
 
+  const numberOfSlides = props.blocks?.length ?? 0;
+  const nextSlide = numberOfSlides ? (activeSlide % numberOfSlides) + 1 : 1;
+
   return (
     <Box
       mt={props.settings?.mt ?? '0'}
@@ -39,7 +42,14 @@ export default function Component(props: PageBlocksSlideshow) {
             key={index}
             className={styles.slide}
           >
-            {renderBlocks(slide, index)}
+            {renderBlocks(slide, index, {
+              slideshowImageLoading: {
+                isInSlideshow: true,
+                isFirstSlide: index === 0,
+                isActiveSlide: activeSlide === index + 1,
+                isNextSlide: nextSlide === index + 1,
+              },
+            })}
           </Box>
         ))}
       </Flex>

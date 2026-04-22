@@ -9,9 +9,31 @@ import { findBreakpointValue } from '../../tina/templating/special-fields';
 import { LinkWrapper } from '../helpers';
 import config from '../../utils/config';
 
-export default function Component(props: PageBlocksImage) {
+type SlideshowImageLoading = {
+  isInSlideshow?: boolean;
+  isFirstSlide?: boolean;
+  isActiveSlide?: boolean;
+  isNextSlide?: boolean;
+};
+
+type ImageComponentProps = PageBlocksImage & {
+  slideshowImageLoading?: SlideshowImageLoading;
+};
+
+export default function Component(props: ImageComponentProps) {
   const breakpoint = useBreakpoint();
   const aspectRatio = findBreakpointValue(breakpoint, 'aspectRatio');
+  const settings = (props.settings as any) ?? {};
+  const slideshowImageLoading = props.slideshowImageLoading;
+
+  const isPriorityImage = Boolean(settings.priority) || Boolean(slideshowImageLoading?.isFirstSlide);
+  const shouldPreloadUpcomingSlide = Boolean(slideshowImageLoading?.isNextSlide) && !isPriorityImage;
+  const loadingMode = isPriorityImage
+    ? undefined
+    : shouldPreloadUpcomingSlide
+      ? 'eager'
+      : 'lazy';
+  const imageSizes = settings.sizes || '100vw';
 
   const content = (
     <AspectRatio
@@ -31,6 +53,10 @@ export default function Component(props: PageBlocksImage) {
         blurDataURL={props.content?.blurImage ?? undefined}
         placeholder={props.content?.blurImage ? 'blur' : 'empty'}
         fill
+        sizes={imageSizes}
+        priority={isPriorityImage}
+        loading={loadingMode}
+        fetchPriority={isPriorityImage || shouldPreloadUpcomingSlide ? 'high' : 'auto'}
         alt={'Image content'}
         role={'presentation'}
         style={{maxWidth: "100%", objectFit: "cover", boxShadow: config.layout.boxShadow }}

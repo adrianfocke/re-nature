@@ -1,5 +1,27 @@
 {
   "name": "Coco",
+  "seo_de": {
+    "title": "Coco Story",
+    "metaDescription": "Wie Coco mit einer klaren Website ihre Yoga-Mission sichtbar macht - eine Story über Design, Wirkung und digitale Präsenz.",
+    "metaKeywords": [
+      "Coco",
+      "Yoga Website",
+      "Story",
+      "Webdesign",
+      "Wien"
+    ]
+  },
+  "seo_en": {
+    "title": "Coco Story",
+    "metaDescription": "How Coco uses a clear website to share her yoga mission - a story about design, impact, and digital presence.",
+    "metaKeywords": [
+      "Coco",
+      "yoga website",
+      "story",
+      "web design",
+      "Vienna"
+    ]
+  },
   "image": "/uploads/leichtigkeit.jpg",
   "blocks": [
     {
@@ -92,6 +114,7 @@
                   "_template": "Text"
                 },
                 {
+                  "link": "mailto:afocke@pm.me",
                   "text_de": "Mich kontaktieren →",
                   "text_en": "Contact me →",
                   "_template": "Button"

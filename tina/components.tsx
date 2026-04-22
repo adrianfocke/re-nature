@@ -15,11 +15,14 @@ import CallToActionTemplate from '../components/CallToAction/CallToActionTemplat
 import CallToAction from '../components/CallToAction/CallToAction';
 import AccordionTemplate from '../components/Accordion/AccordionTemplate';
 import Accordion from '../components/Accordion/Accordion';
+import Flex from '../components/Flex/Flex';
+import FlexTemplate from '../components/Flex/FlexTemplate';
 
 export const templates = [
   AccordionTemplate,
   ButtonTemplate,
   CallToActionTemplate,
+  FlexTemplate,
   GridTemplate,
   HeadingTemplate,
   ImageTemplate,
@@ -36,6 +39,9 @@ export default {
   },
   Call_To_Action: (props: any) => {
     return <CallToAction {...props} />;
+  },
+  Flex: (props: any) => {
+    return <Flex {...props} />;
   },
   Grid: (props: any) => {
     return <Grid {...props} />;

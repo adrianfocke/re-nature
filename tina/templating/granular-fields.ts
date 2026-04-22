@@ -176,6 +176,39 @@ export const GridColumnSpanField: Template['fields'][number] = {
   options: [...radixUnitsPositive],
 };
 
+const flexJustifyFieldLabel = {
+  en: 'Justify',
+  de: 'Ausrichtung horizontal',
+};
+export const FlexJustifyField: Template['fields'][number] = {
+  name: 'justify',
+  label: flexJustifyFieldLabel[config.tina.language],
+  type: 'string',
+  options: ['start', 'center', 'end', 'between'],
+};
+
+const flexAlignFieldLabel = {
+  en: 'Align',
+  de: 'Ausrichtung vertikal',
+};
+export const FlexAlignField: Template['fields'][number] = {
+  name: 'align',
+  label: flexAlignFieldLabel[config.tina.language],
+  type: 'string',
+  options: ['start', 'center', 'end', 'baseline', 'stretch'],
+};
+
+const flexDirectionFieldLabel = {
+  en: 'Direction',
+  de: 'Richtung',
+};
+export const FlexDirectionField: Template['fields'][number] = {
+  name: 'direction',
+  label: flexDirectionFieldLabel[config.tina.language],
+  type: 'string',
+  options: ['row', 'column'],
+};
+
 const marginTopFieldLabel = {
   en: 'Top margin',
   de: 'Abstand oben',
@@ -207,3 +240,13 @@ export const HasBackgroundField: Template['fields'][number] = {
   label: hasBackgroundFieldLabel[config.tina.language],
   type: 'boolean',
 };
+
+const centeredFieldLabel = {
+  en: 'Centered',
+  de: 'Zentriert',
+};
+export const CenteredField: Template['fields'][number] = {
+  name: 'centered',
+  label: centeredFieldLabel[config.tina.language],
+  type: 'boolean',
+}; 

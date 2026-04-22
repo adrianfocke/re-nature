@@ -15,7 +15,11 @@ const findComponentByTypeName = (typeName: string) => {
   return componentName;
 };
 
-export const renderBlocks = (block: any, key: number) => {
+export const renderBlocks = (
+  block: any,
+  key: number,
+  additionalProps?: Record<string, unknown>,
+) => {
   if (!block?.__typename) return null;
 
   const componentName = findComponentByTypeName((block as any).__typename);
@@ -23,5 +27,5 @@ export const renderBlocks = (block: any, key: number) => {
 
   if (!Component) return <p key={key}>{componentName}</p>;
 
-  return <Component key={key} {...block} />;
+  return <Component key={key} {...block} {...additionalProps} />;
 };

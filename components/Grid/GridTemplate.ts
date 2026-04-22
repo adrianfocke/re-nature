@@ -1,6 +1,7 @@
 import type { Template } from 'tinacms';
 import ImageTemplate from '../Image/ImageTemplate';
 import {
+  CenteredField,
   GridColumnSpanField,
   HasBackgroundField,
   MarginBottomField,
@@ -13,6 +14,7 @@ import SlideshowTemplate from '../Slideshow/SlideshowTemplate';
 import CallToActionTemplate from '../CallToAction/CallToActionTemplate';
 import config from '../../utils/config';
 import AccordionTemplate from '../Accordion/AccordionTemplate';
+import FlexTemplate from '../Flex/FlexTemplate';
 
 const label = {
   grid: {
@@ -50,7 +52,7 @@ export default {
           name: 'settings',
           label: `${label.gridItems.blocks[config.tina.language]} Settings`,
           type: 'object',
-          fields: [GridColumnSpanField],
+          fields: [GridColumnSpanField, CenteredField],
         },
         {
           name: 'blocks',
@@ -65,6 +67,7 @@ export default {
             SlideshowTemplate,
             TextTemplate,
             CallToActionTemplate,
+            FlexTemplate,
           ],
         },
       ],

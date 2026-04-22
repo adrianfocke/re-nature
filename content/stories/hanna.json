@@ -1,4 +1,131 @@
 {
   "name": "Hanna",
-  "image": "/uploads/breath-and-growth.png"
+  "seo_de": {
+    "title": "Hanna Story",
+    "metaDescription": "Die Story von Hanna: wie eine persönliche Marke mit einer klaren Website sichtbar wird.",
+    "metaKeywords": [
+      "Hanna",
+      "Story",
+      "Website",
+      "Personal Brand",
+      "Wien"
+    ]
+  },
+  "seo_en": {
+    "title": "Hanna Story",
+    "metaDescription": "Hanna's story: how a personal brand becomes visible through a clear website.",
+    "metaKeywords": [
+      "Hanna",
+      "story",
+      "website",
+      "personal brand",
+      "Vienna"
+    ]
+  },
+  "image": "/uploads/breath-and-growth.png",
+  "blocks": [
+    {
+      "settings": {
+        "mt": "",
+        "mb": "6",
+        "hasBackground": true
+      },
+      "items": [
+        {
+          "settings": {
+            "gridColumnSpan": "2"
+          },
+          "blocks": [
+            {
+              "settings": {
+                "mt": "6",
+                "mb": "6"
+              },
+              "text_de": "Hanna begleitet Menschen durch bewusste Atemarbeit und persoenliche Routinen. Ihre Angebote sollen Ruhe, Klarheit und Wachstum im Alltag erlebbar machen.",
+              "text_en": "Hanna supports people through mindful breathwork and personal routines. Her offers are designed to make calm, clarity, and growth tangible in everyday life.",
+              "_template": "Heading"
+            },
+            {
+              "settings": {
+                "mb": "6"
+              },
+              "text_de": "Hanna, Breathwork Facilitator und Holistic Coach in Wien",
+              "text_en": "Hanna, breathwork facilitator and holistic coach in Vienna",
+              "_template": "Text"
+            }
+          ]
+        }
+      ],
+      "_template": "Grid"
+    },
+    {
+      "items": [
+        {
+          "settings": {
+            "gridColumnSpan": "2"
+          },
+          "blocks": [
+            {
+              "content": {
+                "image": "/uploads/breath-and-growth.png"
+              },
+              "settings": {
+                "mb": "6"
+              },
+              "_template": "Image"
+            }
+          ]
+        }
+      ],
+      "_template": "Grid"
+    },
+    {
+      "settings": {
+        "mt": "6"
+      },
+      "items": [
+        {
+          "settings": {
+            "gridColumnSpan": "1"
+          },
+          "blocks": [
+            {
+              "text_de": "Fuer Hanna war schnell klar, dass ihre Website warm, klar und direkt sein soll. Die Seite sollte nicht nur informieren, sondern auch Vertrauen aufbauen und Menschen zur Kontaktaufnahme einladen. Genau dabei habe ich sie begleitet.\n\nWir haben ihre Inhalte strukturiert, visuell priorisiert und technisch so umgesetzt, dass die Seite auf allen Geraeten stabil und schnell funktioniert. Das Ergebnis ist eine praesente Online-Basis, die ihre Arbeit verstaendlich und glaubwuerdig zeigt.",
+              "text_en": "For Hanna, it quickly became clear that her website should feel warm, clear, and direct. The site should not only inform, but also build trust and invite people to get in touch. That is exactly where I supported her.\n\nWe structured her content, prioritized it visually, and implemented the site technically so it runs reliably and fast on all devices. The result is a strong online home that presents her work in a clear and credible way.",
+              "_template": "Text"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "gridColumnSpan": ""
+          },
+          "blocks": [
+            {
+              "blocks": [
+                {
+                  "text_de": "Überzeugt?",
+                  "text_en": "Convinced?",
+                  "_template": "Heading"
+                },
+                {
+                  "text_de": "Coco hat das Paket \"Bytes only\" gewählt. Vielleicht ist das auch Dein passendes Paket?",
+                  "text_en": "Coco chose the \"Bytes Only\" plan. Maybe that's the right plan for you, too?",
+                  "_template": "Text"
+                },
+                {
+                  "link": "mailto:afocke@pm.me",
+                  "text_de": "Mich kontaktieren →",
+                  "text_en": "Contact me →",
+                  "_template": "Button"
+                }
+              ],
+              "_template": "Call_To_Action"
+            }
+          ]
+        }
+      ],
+      "_template": "Grid"
+    }
+  ]
 }

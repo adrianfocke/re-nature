@@ -1,8 +1,8 @@
 .trigger {
   width: 100%;
+  appearance: none;
   background: unset;
   border: unset;
-  font-size: unset;
   border-bottom: 1px solid var(--gray-6);
   padding: var(--space-3) 0;
 }

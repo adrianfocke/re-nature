@@ -1,4 +1,131 @@
 {
   "name": "Tien Holz Design",
-  "image": "/uploads/sebze/20250807_170434.jpg"
+  "seo_de": {
+    "title": "Tien Holz Design Story",
+    "metaDescription": "Die Story von Tien Holz Design: handwerkliche Qualität digital zeigen mit einer modernen Website.",
+    "metaKeywords": [
+      "Tien Holz Design",
+      "Story",
+      "Holzdesign",
+      "Website",
+      "Wien"
+    ]
+  },
+  "seo_en": {
+    "title": "Tien Holz Design Story",
+    "metaDescription": "The Tien Holz Design story: presenting craftsmanship online with a modern website.",
+    "metaKeywords": [
+      "Tien Holz Design",
+      "story",
+      "wood design",
+      "website",
+      "Vienna"
+    ]
+  },
+  "image": "/uploads/sebze/20250807_170434.jpg",
+  "blocks": [
+    {
+      "settings": {
+        "mt": "",
+        "mb": "6",
+        "hasBackground": true
+      },
+      "items": [
+        {
+          "settings": {
+            "gridColumnSpan": "2"
+          },
+          "blocks": [
+            {
+              "settings": {
+                "mt": "6",
+                "mb": "6"
+              },
+              "text_de": "Tien Holz Design verbindet Handwerk, Materialgefuehl und klare Formensprache. Ziel war eine Website, die Qualitaet und Haltung sofort sichtbar macht.",
+              "text_en": "Tien Holz Design brings together craftsmanship, material sensitivity, and a clear design language. The goal was a website that makes quality and attitude visible right away.",
+              "_template": "Heading"
+            },
+            {
+              "settings": {
+                "mb": "6"
+              },
+              "text_de": "Tien Holz Design, Holzwerkstatt und Designpraxis in Wien",
+              "text_en": "Tien Holz Design, wood workshop and design practice in Vienna",
+              "_template": "Text"
+            }
+          ]
+        }
+      ],
+      "_template": "Grid"
+    },
+    {
+      "items": [
+        {
+          "settings": {
+            "gridColumnSpan": "2"
+          },
+          "blocks": [
+            {
+              "content": {
+                "image": "/uploads/sebze/20250807_170434.jpg"
+              },
+              "settings": {
+                "mb": "6"
+              },
+              "_template": "Image"
+            }
+          ]
+        }
+      ],
+      "_template": "Grid"
+    },
+    {
+      "settings": {
+        "mt": "6"
+      },
+      "items": [
+        {
+          "settings": {
+            "gridColumnSpan": "1"
+          },
+          "blocks": [
+            {
+              "text_de": "Bei diesem Projekt ging es darum, die handwerkliche Tiefe digital praezise zu vermitteln. Die neue Seite sollte Arbeiten, Prozesse und Werte in einer ruhigen, hochwertigen Struktur praesentieren. Ich habe den Aufbau konzipiert und die technische Umsetzung uebernommen.\n\nDurch den modularen Aufbau kann das Team neue Inhalte leicht pflegen und aktuelle Projekte flexibel ergaenzen. So bleibt die Website lebendig und unterstuetzt den Werkstattalltag langfristig.",
+              "text_en": "This project focused on translating deep craftsmanship into a precise digital experience. The new site should present work, process, and values in a calm, high-quality structure. I designed the architecture and handled the technical implementation.\n\nThanks to the modular setup, the team can maintain content easily and add current projects flexibly. This keeps the website alive and supports daily workshop operations over time.",
+              "_template": "Text"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "gridColumnSpan": ""
+          },
+          "blocks": [
+            {
+              "blocks": [
+                {
+                  "text_de": "Überzeugt?",
+                  "text_en": "Convinced?",
+                  "_template": "Heading"
+                },
+                {
+                  "text_de": "Coco hat das Paket \"Bytes only\" gewählt. Vielleicht ist das auch Dein passendes Paket?",
+                  "text_en": "Coco chose the \"Bytes Only\" plan. Maybe that's the right plan for you, too?",
+                  "_template": "Text"
+                },
+                {
+                  "link": "mailto:afocke@pm.me",
+                  "text_de": "Mich kontaktieren →",
+                  "text_en": "Contact me →",
+                  "_template": "Button"
+                }
+              ],
+              "_template": "Call_To_Action"
+            }
+          ]
+        }
+      ],
+      "_template": "Grid"
+    }
+  ]
 }

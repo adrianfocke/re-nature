@@ -51,6 +51,19 @@ export default {
         MarginTopField,
         MarginBottomField,
         ...createResponsiveField(AspectRatioField),
+        {
+          name: 'sizes',
+          label: 'Image Sizes',
+          type: 'string',
+          description:
+            'Next.js sizes attribute for responsive loading, e.g. (max-width: 768px) 100vw, 1200px',
+        },
+        {
+          name: 'priority',
+          label: 'Prioritize Loading',
+          type: 'boolean',
+          description: 'Enable for above-the-fold images to improve LCP.',
+        },
       ],
     },
   ],

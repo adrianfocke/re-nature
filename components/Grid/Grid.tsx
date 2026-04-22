@@ -1,4 +1,4 @@
-import { Box, Container, Grid } from '@radix-ui/themes';
+import { Box, Container, Flex, Grid } from '@radix-ui/themes';
 import { tinaField, useEditState } from 'tinacms/dist/react';
 import type { PageBlocksGrid } from '../../tina/__generated__/types';
 import EditHelper from '../../tina/templating/EditHelper';
@@ -25,10 +25,23 @@ export default function Component(props: PageBlocksGrid) {
             key={index}
             gridColumn={{ initial: 'span 1', md: `span ${item?.settings?.gridColumnSpan}` }}
             data-tina-field={tinaField(item)}
+            height={item?.settings?.centered ? '100%' : undefined}
           >
-            {item?.blocks?.map((block, index) => {
-              return renderBlocks(block, index);
-            })}
+            {item?.settings?.centered ? (
+              <Flex justify="center" direction="column" height="100%">
+                {item?.blocks?.map((block, blockIndex) => {
+                  return (
+                    <Box key={blockIndex}>
+                      {renderBlocks(block, blockIndex)}
+                    </Box>
+                  );
+                })}
+              </Flex>
+            ) : (
+              item?.blocks?.map((block, blockIndex) => {
+                return renderBlocks(block, blockIndex);
+              })
+            )}
           </Box>
         ))}
       </Grid>
