@@ -15,6 +15,7 @@ export default {
   layout: {
     borderRadius: 'var(--radius-4)',
     padding: '4',
+    gap: '5',
     gridColumns: {
       initial: '1',
       md: '2',
@@ -23,13 +24,19 @@ export default {
     radiusVar: 'var(--radius-4)',
     textSize: {
       initial: '4',
-      md: '5',
+      xs: "4",
+      sm: '4',
+      md: '4',
+      lg: '4',
+      xl: '4',
     },
     headingSize: {
-      initial: '7',
-      md: '8',
-      lg: '7',
-      xl: '7',
+      initial: '4',
+      xs: "4",
+      sm: '4',
+      md: '6',
+      lg: '6',
+      xl: '6',
     },
     boxShadow: 'var(--shadow-3)',
   },

@@ -1,13 +1,103 @@
 {
   "name": "Coco",
+  "image": "/uploads/leichtigkeit.jpg",
   "blocks": [
+    {
+      "settings": {
+        "mt": "",
+        "mb": "6",
+        "hasBackground": true
+      },
+      "items": [
+        {
+          "settings": {
+            "gridColumnSpan": "2"
+          },
+          "blocks": [
+            {
+              "settings": {
+                "mt": "6",
+                "mb": "6"
+              },
+              "text_de": "Meine Lebensaufgabe ist es, Menschen zu erheben. Ich gestalte Yoga-Einheiten, die auf allen Ebenen wirken – samt Bhakti,  Soundhealings und einer lebendigen Community.",
+              "text_en": "My life's mission is to uplift people. I design yoga sessions that have an impact on every level—including bhakti, sound healing, and a vibrant community.",
+              "_template": "Heading"
+            },
+            {
+              "settings": {
+                "mb": "6"
+              },
+              "text_de": "Coco, Yoga Teacher, Soundhealerin und Community Lead in Wien",
+              "text_en": "Coco, yoga teacher, sound healer, and community lead in Vienna",
+              "_template": "Text"
+            }
+          ]
+        }
+      ],
+      "_template": "Grid"
+    },
     {
       "items": [
         {
+          "settings": {
+            "gridColumnSpan": "2"
+          },
           "blocks": [
             {
-              "text_de": "Meine Lebensaufgabe ist es, Menschen zu erheben. Ich gestalte Yoga-Einheiten, die auf allen Ebenen wirken—samt Bhakti,  Soundhealings und einer lebendigen Community.",
-              "_template": "Heading"
+              "content": {
+                "image": "/uploads/leichtigkeit.jpg"
+              },
+              "settings": {
+                "mb": "6"
+              },
+              "_template": "Image"
+            }
+          ]
+        }
+      ],
+      "_template": "Grid"
+    },
+    {
+      "settings": {
+        "mt": "6"
+      },
+      "items": [
+        {
+          "settings": {
+            "gridColumnSpan": "1"
+          },
+          "blocks": [
+            {
+              "text_de": "Geschichten zu erzählen macht Spaß. Für Coco und ihre Yoga-Stunden bedeutet das aber viel mehr als nur das. Ihre Lebensaufgabe ist der yogische Weg mitsamt all seinen Facetten. Das ist was sie gerne aussagen möchte. Ich habe ihr bei der Erstellung ihrer Webseite geholfen.\n\nMeine Fähigkeiten fusionieren perfekt mit den Designideen, die sie bereits mitgebracht hatte. Dank meiner Skills hat sie nun eine Webseite, die genau das macht, was sie soll: zeigen, wer sie ist.",
+              "text_en": "Telling stories is fun. But for Coco and her yoga classes, it means so much more than that. Her life’s work is the yogic path in all its facets. That’s what she wants to convey. I helped her create her website.\n\nMy skills blend perfectly with the design ideas she had already brought to the table. Thanks to my expertise, she now has a website that does exactly what it’s supposed to: show who she is.",
+              "_template": "Text"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "gridColumnSpan": ""
+          },
+          "blocks": [
+            {
+              "blocks": [
+                {
+                  "text_de": "Überzeugt?",
+                  "text_en": "Convinced?",
+                  "_template": "Heading"
+                },
+                {
+                  "text_de": "Coco hat das Paket \"Bytes only\" gewählt. Vielleicht ist das auch Dein passendes Paket?",
+                  "text_en": "Coco chose the \"Bytes Only\" plan. Maybe that's the right plan for you, too?",
+                  "_template": "Text"
+                },
+                {
+                  "text_de": "Mich kontaktieren →",
+                  "text_en": "Contact me →",
+                  "_template": "Button"
+                }
+              ],
+              "_template": "Call_To_Action"
             }
           ]
         }

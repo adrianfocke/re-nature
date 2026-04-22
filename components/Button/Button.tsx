@@ -3,10 +3,7 @@ import type { PageBlocksButton } from '../../tina/__generated__/types';
 import { useContext } from 'react';
 import { LanguageContext } from '../../utils/context/language';
 import { tinaField } from 'tinacms/dist/react';
-import {
-  findIntlValue,
-  findResponsiveValue,
-} from '../../tina/templating/special-fields';
+import { findIntlValue } from '../../tina/templating/special-fields';
 import { LinkWrapper } from '../helpers';
 import config from '../../utils/config';
 
@@ -18,7 +15,6 @@ function Component(props: PageBlocksButton) {
     <Button
       data-tina-field={tinaField(props ?? props)}
       variant={(props.settings?.variant as any) ?? 'classic'}
-      size={findResponsiveValue(props.settings, 'textSize')}
       style={{ cursor: 'pointer' }}
       radius={config.layout.radius}
     >

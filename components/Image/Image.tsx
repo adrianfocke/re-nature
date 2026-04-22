@@ -6,7 +6,6 @@ import type { PageBlocksImage } from '../../tina/__generated__/types';
 import useBreakpoint from '../../utils/hook/useBreakpoint';
 import { renderBlocks } from '../../tina/templating/utils';
 import { findBreakpointValue } from '../../tina/templating/special-fields';
-import styles from './Image.module.css';
 import { LinkWrapper } from '../helpers';
 import config from '../../utils/config';
 
@@ -18,8 +17,8 @@ export default function Component(props: PageBlocksImage) {
     <AspectRatio
       data-tina-field={tinaField(props.content ?? props)}
       ratio={aspectRatioMap[props.settings?.[aspectRatio]] ?? 16 / 9}
-      className={styles.aspectRatioContainer}
-      style={{ overflow: 'hidden', borderRadius: config.layout.radiusVar, boxShadow: config.layout.boxShadow }}
+      style={{ border: "1px solid var(--gray-12)", overflow: 'hidden', borderRadius: config.layout.radiusVar, }}
+    
     >
       <NextImage
         src={
@@ -34,14 +33,13 @@ export default function Component(props: PageBlocksImage) {
         fill
         alt={'Image content'}
         role={'presentation'}
-        className={styles.imageContent}
+        style={{maxWidth: "100%", objectFit: "cover", boxShadow: config.layout.boxShadow }}
       />
       <Flex
         direction={'column'}
-        className={styles.overlayContainer}
         justify={'start'}
       >
-        {props.content?.blocks ? <Box pl={config.layout.padding} p={props.content?.blocks.length > 1 ? config.layout.padding : '0'} maxWidth={{ initial: '100%', md: '400px' }} width={"max-content"}>
+        {props.content?.blocks ? <Box pl={config.layout.padding} p={config.layout.padding} maxWidth={{ initial: '100%', md: '400px' }} width={"max-content"}>
           {props.content?.blocks.length > 1 ? <Card style={{ boxShadow: config.layout.boxShadow }}>
             {props.content?.blocks?.map((block, j) => {
               return renderBlocks(block, j);

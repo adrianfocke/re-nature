@@ -197,3 +197,13 @@ export const MarginBottomField: Template['fields'][number] = {
   type: 'string',
   options: [...radixUnits],
 };
+
+const hasBackgroundFieldLabel = {
+  en: 'Has Background',
+  de: 'Hat Hintergrund',
+};
+export const HasBackgroundField: Template['fields'][number] = {
+  name: 'hasBackground',
+  label: hasBackgroundFieldLabel[config.tina.language],
+  type: 'boolean',
+};

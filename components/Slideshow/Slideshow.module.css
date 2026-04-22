@@ -32,11 +32,6 @@
   background-color: var(--violet-6) !important;
 }
 
-/* Slideshow component styles */
-.slideshowContainer {
-  position: relative;
-}
-
 .slideScroller {
   overflow-x: auto;
   overflow-y: hidden;

@@ -9,6 +9,7 @@ export default function Component(props: PageBlocksGrid) {
   const { edit } = useEditState();
 
   return (
+    <Box style={{backgroundColor: !!props.settings?.hasBackground ? 'var(--gray-2)' : 'transparent'}}>
     <Container
       mt={props.settings?.mt ?? '0'}
       mb={props.settings?.mb ?? '0'}
@@ -18,7 +19,7 @@ export default function Component(props: PageBlocksGrid) {
       }}
     >
       {edit && <EditHelper {...props} />}
-      <Grid columns={{ initial: config.layout.gridColumns.initial, md: config.layout.gridColumns.md }} gap={config.layout.padding}>
+      <Grid columns={{ initial: config.layout.gridColumns.initial, md: config.layout.gridColumns.md }} gap={config.layout.gap}>
         {props.items?.map((item, index) => (
           <Box
             key={index}
@@ -32,5 +33,6 @@ export default function Component(props: PageBlocksGrid) {
         ))}
       </Grid>
     </Container>
+    </Box>
   );
 }

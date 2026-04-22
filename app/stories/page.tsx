@@ -12,7 +12,7 @@ export default async function Page() {
   const cookieStore = await cookies();
   const language = cookieStore.get('language')?.value ?? 'en';
 
-  const data = await client.queries.projectAndNavConnection();
+  const data = await client.queries.storyAndNavConnection();
 
   return (
     <ClientPage

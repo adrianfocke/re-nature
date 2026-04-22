@@ -5,8 +5,8 @@ import ClientPage from './client-page';
 import { generateItemMetadata } from '../../../utils/generateCollectionMetadata';
 
 export async function generateStaticParams() {
-  const pages = await client.queries.projectConnection();
-  const paths = pages.data?.projectConnection?.edges?.map((edge) => ({
+  const pages = await client.queries.storyConnection();
+  const paths = pages.data?.storyConnection?.edges?.map((edge) => ({
     filename: edge?.node?._sys.breadcrumbs,
   }));
 
@@ -26,7 +26,7 @@ export default async function Page(props: {
   const cookieStore = await cookies();
   const language = cookieStore.get('language')?.value ?? 'en';
 
-  const data = await client.queries.projectAndNavigation({
+  const data = await client.queries.storyAndNavigation({
     relativePath: `${params.filename}.json`,
   });
 

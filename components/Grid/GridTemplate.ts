@@ -2,6 +2,7 @@ import type { Template } from 'tinacms';
 import ImageTemplate from '../Image/ImageTemplate';
 import {
   GridColumnSpanField,
+  HasBackgroundField,
   MarginBottomField,
   MarginTopField,
 } from '../../tina/templating/granular-fields';
@@ -37,7 +38,7 @@ export default {
       name: 'settings',
       label: `${label.grid[config.tina.language]} Settings`,
       type: 'object',
-      fields: [MarginTopField, MarginBottomField],
+      fields: [MarginTopField, MarginBottomField, HasBackgroundField],
     },
     {
       name: 'items',

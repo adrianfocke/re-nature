@@ -31,7 +31,7 @@ export default function Footer(props: FooterQuery['footer']) {
         md: '0',
       }}
       style={{
-        borderTop: '1px solid var(--gray-6)',
+        borderTop: '1px solid var(--gray-12)',
       }}
     >
       <Flex

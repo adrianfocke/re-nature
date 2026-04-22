@@ -12,50 +12,134 @@ seo: {}
 name: Home
 seo_de:
   title: Startseite
-  metaDescription: >-
-    Ich bin Webdeveloper und hier findest du alle Infos zu mir und was ich
-    mache.
+  metaDescription: Ich bin Webdeveloper und hier findest du alle Infos zu mir und was ich mache.
   metaKeywords:
     - webseite
     - wien
 seo_en:
   title: Start
-  metaDescription: >-
-    I am a web developer, and here you can find all the information about me and
-    what I do.
+  metaDescription: 'I am a web developer, and here you can find all the information about me and what I do.'
   metaKeywords:
     - websites
     - wien
 blocks:
   - settings:
+      mb: ''
+      hasBackground: true
+    items:
+      - settings:
+          gridColumnSpan: '2'
+        blocks:
+          - settings:
+              nextSlideTimeout: ''
+            blocks:
+              - content:
+                  image: /uploads/leichtigkeit.jpg
+                  blocks:
+                    - settings:
+                        isPlain: true
+                      blocks:
+                        - text_de: Om Shanti Webseite
+                          text_en: Om Shanti Website
+                          _template: Heading
+                        - text_de: 'Trust the Journey: Eine maßgeschneiderte Seite für Coco.'
+                          text_en: 'Trust the Journey: A custom-made page for Coco.'
+                          _template: Text
+                        - settings:
+                            variant: surface
+                          link: /stories/coco
+                          text_de: Zu ihrer Story →
+                          text_en: Read her story →
+                          _template: Button
+                      _template: Call_To_Action
+                settings:
+                  mt: '6'
+                  aspectRatio_initial: 3/4
+                  aspectRatio_sm: 3/4
+                _template: Image
+              - content:
+                  image: /uploads/valerie.jpg
+                  blocks:
+                    - settings:
+                        isPlain: true
+                      blocks:
+                        - text_de: Lebendiges Theater
+                          text_en: Theatre alive
+                          _template: Heading
+                        - text_de: Valerie schafft interdisziplinäre Kunstformen und neue Erzählweisen.
+                          text_en: Valerie creates interdisciplinary art forms and new narrative styles.
+                          _template: Text
+                        - settings:
+                            variant: surface
+                          link: /stories/valerie
+                          text_de: Zu ihrer Story →
+                          text_en: Read her story →
+                          _template: Button
+                      _template: Call_To_Action
+                settings:
+                  mt: '6'
+                  aspectRatio_initial: 3/4
+                  aspectRatio_sm: 3/4
+                _template: Image
+              - content:
+                  image: /uploads/sebze/20250807_170434.jpg
+                  blocks:
+                    - settings:
+                        isPlain: true
+                      blocks:
+                        - text_de: Ein Tribut ans Material Holz.
+                          text_en: Wood connects with people.
+                          _template: Heading
+                        - text_de: Tien Holz Design schafft Holzdesigns und zeigt diese auf seiner neuen Page.
+                          text_en: Tien Holz Design creates wooden designs and showcases them on its new website.
+                          _template: Text
+                        - settings:
+                            variant: surface
+                          text_de: Zu seiner Story →
+                          text_en: Read his story →
+                          _template: Button
+                      _template: Call_To_Action
+                settings:
+                  mt: '6'
+                  aspectRatio_initial: 3/4
+                  aspectRatio_xs: ''
+                  aspectRatio_sm: 3/4
+                _template: Image
+            _template: Slideshow
+    _template: Grid
+  - settings:
       mt: '6'
+      mb: ''
     items:
       - settings:
           gridColumnSpan: ''
         blocks:
+          - text_de: Ehrliches Design für mutige Menschen.
+            text_en: Honest design for fierce people.
+            _template: Heading
+          - text_de: |-
+              Hi, mein Name ist Adrian und ich bin Developer und Digital Consultant in Wien. Durch meine Arbeit kann ich Menschen digital erheben und das erfüllt mich.
+
+              Außerdem mache ich noch einige andere Dinge: ich bin Masseur, Yogalehrer und halte unterschiedliche Formate zum Thema Männlichkeit.
+
+              Meine Mission: Leisen Stimmen Gehör geben, verstehenwollen, ehrlich sein, reisen, Räume halten, Privilegien sehen und hinterfragen, Männer* in ihre Sanftheit bringen, Yogi:nis unterstützen, Dir den Rücken stärken.
+            text_en: |-
+              Hi, my name is Adrian, and I’m a developer and digital consultant in Vienna. Through my work, I help people thrive in the digital world, and that’s what fulfills me.
+
+              I also do a few other things: I’m a massage therapist, a yoga instructor, and I lead various workshops on the topic of masculinity.
+
+              My mission: To give a voice to the quiet ones, to seek understanding, to be honest, to travel, to create safe spaces, to recognize and question privilege, to help men* embrace their gentleness, to support Yogi:nis, and to have your back.
+            _template: Text
           - settings:
-              isPlain: false
-            blocks:
-              - text_de: Ehrliches Design für mutige Menschen.
-                _template: Heading
-              - text_de: >-
-                  Hi, mein Name ist Adrian und ich bin Developer und Digital
-                  Consultant in Wien. Durch meine Arbeit kann ich Menschen
-                  digital erheben und das erfüllt mich.
-
-
-                  Außerdem mache ich noch einige andere Dinge: ich bin Masseur,
-                  Yogalehrer und halte unterschiedliche Formate zum Thema
-                  Männlichkeit.
-                _template: Text
-              - link: /about
-                text_de: Mehr über mich
-                _template: Button
-            _template: Call_To_Action
+              mt: '6'
+              variant: surface
+            link: /about
+            text_de: Mehr über mich erfahren →
+            text_en: Learn more about me →
+            _template: Button
       - blocks:
           - content:
               image: /uploads/portrait-1200-viereck.png
-              blurImage: ''
             settings:
               aspectRatio_initial: 1/1
               aspectRatio_xs: 1/1
@@ -64,93 +148,23 @@ blocks:
               aspectRatio_lg: 1/1
               aspectRatio_xl: 1/1
             _template: Image
-      - settings:
-          gridColumnSpan: '2'
-        blocks:
-          - blocks:
-              - content:
-                  image: /uploads/coco.png
-                  blocks:
-                    - settings:
-                        textSize_xs: ''
-                        textSize_sm: '3'
-                        textSize_md: ''
-                      text_de: Om Shanti Webseite
-                      _template: Heading
-                    - text_de: 'Trust the Journey: Eine maßgeschneiderte Seite für Coco.'
-                      _template: Text
-                    - settings:
-                        variant: surface
-                      text_de: Zu ihrer Story
-                      _template: Button
-                settings:
-                  aspectRatio_initial: 3/4
-                  aspectRatio_xs: 3/4
-                  aspectRatio_sm: 3/4
-                  aspectRatio_md: ''
-                  aspectRatio_lg: ''
-                  aspectRatio_xl: ''
-                _template: Image
-              - content:
-                  image: /uploads/breath-and-growth.png
-                  blocks:
-                    - settings:
-                        textSize_sm: '3'
-                      text_de: 'Atme ein, atme aus'
-                      _template: Heading
-                    - text_de: Hanna startet durch mit ihrer neuen Webseite.
-                      _template: Text
-                    - settings:
-                        variant: surface
-                      text_de: Zu ihrer Story
-                      _template: Button
-                settings:
-                  aspectRatio_initial: 3/4
-                  aspectRatio_xs: 3/4
-                  aspectRatio_sm: 3/4
-                  aspectRatio_md: ''
-                  aspectRatio_lg: ''
-                  aspectRatio_xl: 1/1
-                _template: Image
-              - content:
-                  image: /uploads/valerie.jpg
-                  blocks:
-                    - settings:
-                        textSize_sm: '3'
-                      text_de: Lebendiges Theater
-                      _template: Heading
-                    - text_de: >-
-                        Valerie schafft interdisziplinäre Kunstformen und neue
-                        Erzählweisen.
-                      _template: Text
-                    - settings:
-                        variant: surface
-                      text_de: Zu ihrer Story
-                      _template: Button
-                settings:
-                  aspectRatio_initial: 3/4
-                  aspectRatio_xs: 3/4
-                  aspectRatio_sm: 3/4
-                  aspectRatio_md: ''
-                  aspectRatio_lg: ''
-                  aspectRatio_xl: 1/1
-                _template: Image
-            _template: Slideshow
-      - settings:
-          gridColumnSpan: '2'
-        blocks:
-          - text_de: 'Meine Pakete:'
-            text_en: ''
+    _template: Grid
+  - settings:
+      mt: '6'
+    items:
+      - blocks:
+          - text_de: Meine Pakete
+            text_en: My services
             _template: Heading
-      - settings:
-          gridColumnSpan: '2'
-        blocks:
-          - text_de: >-
-              Um es dir einfacher zu machen, habe ich ein paar Pakete
-              zusammengestellt. Die Pakete ermöglichen dir deine Online-Präsenz,
-              unabhängig von Big Tech und heimlichen Abo-Fallen. Je nach demnach
-              was du brauchst, unterstütze ich dich im Aufbau deiner Ideen.
+          - text_de: 'Ich gestalte Webseiten unabhängig von Big Tech und heimlichen Abo-Fallen. Das sind meine Pakete:'
+            text_en: 'I design websites free from Big Tech and hidden subscription traps. Here are my packages:'
             _template: Text
+    _template: Grid
+  - settings:
+      mt: '6'
+      mb: ''
+      hasBackground: false
+    items:
       - blocks:
           - blocks:
               - settings:
@@ -158,29 +172,25 @@ blocks:
                   textSize_lg: ''
                   textSize_xl: ''
                 text_de: Volle Freiheit
+                text_en: Full freedom
                 _template: Heading
-              - text_de: >-
-                  Abo-freies Paket für dich und all deine Ideen: wir lassen
-                  deine perfekte Webseite entstehen. Inkludiert sind ein
-                  Design-Prozess, technische Umsetzung, Beratung zu
-                  Suchmaschinen-Optimierung (SEO), sowie Unterstützung über die
-                  Fertigstellung hinaus.
+              - text_de: 'Abo-freies Paket für dich und all deine Ideen: wir lassen deine perfekte Webseite entstehen. Inkludiert sind ein Design-Prozess, technische Umsetzung, Beratung zu Suchmaschinen-Optimierung (SEO), sowie Unterstützung über die Fertigstellung hinaus.'
+                text_en: 'A subscription-free package for you and all your ideas: we’ll help you create your perfect website. This includes a design process, technical implementation, advice on search engine optimization (SEO), and ongoing support even after the project is complete.'
                 _template: Text
-              - text_de: Buchen
+              - link: 'mailto:afocke@pm.me'
+                text_de: Buchen
                 _template: Button
             _template: Call_To_Action
       - blocks:
           - blocks:
               - text_de: Bytes Only
+                text_en: Bytes Only
                 _template: Heading
-              - text_de: >-
-                  Du kommst mit einem fertigen Design und brauchst wen der es
-                  dir technisch umsetzt und dich digital unterstützt? Ich habe
-                  das Know-How und die passende Technologie, samt intuitiver
-                  Oberfläche und einem Tech-Stack auf Basis modernster
-                  Web-Technologie.
+              - text_de: 'Du kommst mit einem fertigen Design und brauchst wen der es dir technisch umsetzt und dich digital unterstützt? Ich habe das Know-How und die passende Technologie, samt intuitiver Oberfläche und einem Tech-Stack auf Basis modernster Web-Technologie.'
+                text_en: 'Do you have a finished design and need someone to bring it to life and provide digital support? I have the expertise and the right technology, including an intuitive interface and a tech stack built on the latest web technologies.'
                 _template: Text
-              - text_de: Buchen
+              - link: 'mailto:afocke@pm.me'
+                text_de: Buchen
                 _template: Button
             _template: Call_To_Action
       - blocks:
@@ -188,14 +198,13 @@ blocks:
               isPlain: false
             blocks:
               - text_de: Digitale Beratung
+                text_en: Digital Consulting
                 _template: Heading
-              - text_de: >-
-                  Ich biete 1:1 digitale Beratung für all things web an. Ich
-                  sehe darin meinen Auftrag, dich digital zu stärken und dir
-                  eine sichere Basis für deine Idee zu geben. Lass mich all das
-                  Rundherum machen und finde so mehr Fokus auf deine Expertise.
+              - text_de: 'Ich biete 1:1 digitale Beratung für all things web an. Ich sehe darin meinen Auftrag, dich digital zu stärken und dir eine sichere Basis für deine Idee zu geben. Lass mich all das Rundherum machen und finde so mehr Fokus auf deine Expertise.'
+                text_en: I offer one-on-one digital consulting for all things web. My mission is to help you build your digital presence and provide a solid foundation for your idea. Let me handle all the details so you can focus more on your expertise.
                 _template: Text
-              - text_de: Buchen
+              - link: 'mailto:afocke@pm.me'
+                text_de: Buchen
                 _template: Button
             _template: Call_To_Action
       - blocks:
@@ -203,69 +212,42 @@ blocks:
               isPlain: true
             blocks:
               - text_de: Shanti
+                text_en: Shanti
                 _template: Heading
-              - text_de: >-
-                  Du hast einen Cause, den die Welt braucht und begrenzte
-                  finanzielle Ressourcen? Für ausgewählte Ideen arbeite ich
-                  unter speziellen Konditionen. Wie Dorothea Neff sagte: "Geld
-                  ist ein Mittel, aber das Wachstum der Seele ist unbezahlbar".
+              - text_de: 'Du hast einen Cause, den die Welt braucht und begrenzte finanzielle Ressourcen? Für ausgewählte Ideen arbeite ich unter speziellen Konditionen. Wie Dorothea Neff sagte: "Geld ist ein Mittel, aber das Wachstum der Seele ist unbezahlbar".'
+                text_en: 'Do you have a cause the world needs but limited financial resources? For select ideas, I work under special terms. As Dorothea Neff said: "Money is a means to an end, but the growth of the soul is priceless."'
                 _template: Text
               - settings:
                   variant: surface
+                link: 'mailto:afocke@pm.me'
                 text_de: Bewerben
                 _template: Button
             _template: Call_To_Action
+    _template: Grid
+  - settings:
+      mt: '6'
+    items:
       - settings:
           gridColumnSpan: '2'
         blocks:
-          - settings:
-              textSize_lg: '8'
-            text_de: Noch Fragen?
+          - text_de: Noch Fragen?
+            text_en: Any more questions?
             _template: Heading
-      - settings:
-          gridColumnSpan: '2'
-        blocks:
           - blocks:
               - title: Warum verwende ich kein Wordpress?
                 blocks:
-                  - text_de: >-
-                      Wordpress ist ein praktisches System, hat aber ein paar
-                      Schwachstellen: Viele Plugins funktionieren zwar, für eine
-                      umfassende Funktionalität muss man aber extra zahlen.
-                      Außerdem weisen die meisten Plugins einen fragwürdigen
-                      Datenschutz vor. Wordpress ist über die Jahre hinweg so
-                      sehr gewachsen, dass die Oberfläche schwer zu bedienen
-                      geworden ist. Bei mir bekommst du ein skalierbars
-                      Block-System, in dem ich dir Funktionalität spezifisch
-                      dazubaue und so einen Standard garantieren kann –
-                      wiederverwendbar, modular und einfach in der Handhabung.
+                  - text_de: 'Wordpress ist ein praktisches System, hat aber ein paar Schwachstellen: Viele Plugins funktionieren zwar, für eine umfassende Funktionalität muss man aber extra zahlen. Außerdem weisen die meisten Plugins einen fragwürdigen Datenschutz vor. Wordpress ist über die Jahre hinweg so sehr gewachsen, dass die Oberfläche schwer zu bedienen geworden ist. Bei mir bekommst du ein skalierbars Block-System, in dem ich dir Funktionalität spezifisch dazubaue und so einen Standard garantieren kann – wiederverwendbar, modular und einfach in der Handhabung.'
+                    text_en: 'WordPress is a practical system, but it has a few weaknesses: While many plugins work, you have to pay extra for comprehensive functionality. In addition, most plugins have questionable data protection. WordPress has grown so much over the years that the interface has become difficult to use. With me, you get a scalable block system where I build in specific functionality, ensuring a consistent standard—reusable, modular, and easy to use.'
                     _template: Text
               - title: Kann ich eigenständig Änderungen vornehmen?
                 blocks:
-                  - text_de: >-
-                      Ja, du kannst du. Dein Content ist jederzeit von dir
-                      anpassbar und Änderungen werden sofort übernommen. Ich
-                      arbeite effizient und verwende nur Open Source Software.
-                      All meine Tools sind frei verfügbar und so können andere
-                      Developer:innen jederzeit einspringen, erweitern oder
-                      übernehmen. Wenn du also zukünftig mit anderen Menschen
-                      zusammenarbeitest, bist du unabhängig von mir. Außerdem
-                      habe ich eine weitgehende Dokumentation in meiner Codebase
-                      etabliert, um es anderen Menschen noch einfacher zu
-                      machen.
+                  - text_de: 'Ja, du kannst du. Dein Content ist jederzeit von dir anpassbar und Änderungen werden sofort übernommen. Ich arbeite effizient und verwende nur Open Source Software. All meine Tools sind frei verfügbar und so können andere Developer:innen jederzeit einspringen, erweitern oder übernehmen. Wenn du also zukünftig mit anderen Menschen zusammenarbeitest, bist du unabhängig von mir. Außerdem habe ich eine weitgehende Dokumentation in meiner Codebase etabliert, um es anderen Menschen noch einfacher zu machen.'
+                    text_en: 'Yes, you can. You can edit your content at any time, and changes are applied immediately. I work efficiently and use only open-source software. All my tools are freely available, so other developers can step in, expand, or take over at any time. That way, if you collaborate with others in the future, you won’t be dependent on me. I’ve also included extensive documentation in my codebase to make things even easier for others.'
                     _template: Text
               - title: Wie funktioniert das mit der KI?
                 blocks:
-                  - text_de: >
-                      Ich programmiere selbst teils mithilfe von KI. Meine
-                      Arbeit besteht daraus, ein vollumfängliches Produkt
-                      entstehen zu lassen, welches Weitblick hat und dem
-                      Zeitgeist entspricht. Manches kann die KI nicht,
-                      beispielsweise netzwerken oder eine holitische Begleitung
-                      anbieten. Ich baue dir was, das wirklich zu dir und deiner
-                      Idee passt. Ferner biete ich dir präzisen technischen
-                      Support an und vermittle nachhaltiges Hosting. Du bekommst
-                      das Beste aus beiden Welten, zu einem passenden Preis.
+                  - text_de: 'Ich programmiere selbst teils mithilfe von KI. Meine Arbeit besteht daraus, ein vollumfängliches Produkt entstehen zu lassen, welches Weitblick hat und dem Zeitgeist entspricht. Manches kann die KI nicht, beispielsweise netzwerken oder eine holitische Begleitung anbieten. Ich baue dir was, das wirklich zu dir und deiner Idee passt. Ferner biete ich dir präzisen technischen Support an und vermittle nachhaltiges Hosting. Du bekommst das Beste aus beiden Welten, zu einem passenden Preis.'
+                    text_en: 'I do some of my own programming, partly with the help of AI. My job is to create a comprehensive product that is forward-thinking and in tune with the times. There are some things AI can’t do, such as networking or providing holistic support. I’ll build something for you that truly fits you and your vision. I also offer precise technical support and arrange for sustainable hosting. You get the best of both worlds, at a fair price.'
                     _template: Text
             _template: Accordion
     _template: Grid

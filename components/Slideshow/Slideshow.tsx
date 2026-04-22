@@ -25,7 +25,7 @@ export default function Component(props: PageBlocksSlideshow) {
     <Box
       mt={props.settings?.mt ?? '0'}
       mb={props.settings?.mb ?? config.layout.padding}
-      className={styles.slideshowContainer}
+      position={"relative"}
     >
       <Flex
         overflowX='auto'
@@ -37,8 +37,6 @@ export default function Component(props: PageBlocksSlideshow) {
         {props.blocks?.map((slide, index) => (
           <Box
             key={index}
-            flexShrink={'0'}
-            width={'100%'}
             className={styles.slide}
           >
             {renderBlocks(slide, index)}

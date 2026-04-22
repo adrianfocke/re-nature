@@ -22,7 +22,7 @@ export default function Navigation(props: NavigationQuery['navigation']) {
         md: '0',
       }}
       style={{
-        borderBottom: '1px solid var(--gray-6)',
+        borderBottom: '1px solid var(--gray-12)',
       }}
     >
       <Flex
@@ -49,8 +49,8 @@ export default function Navigation(props: NavigationQuery['navigation']) {
           </Link>
           <Box display={{ initial: 'block', md: 'none' }}>
             <Popover.Root>
-              <Popover.Trigger>
-                <RadixButton mt={'1'} aria-label='Open navigation menu'>
+              <Popover.Trigger >
+                <RadixButton color="gray" mt={'1'} aria-label='Open navigation menu'>
                   <HamburgerMenuIcon />
                 </RadixButton>
               </Popover.Trigger>

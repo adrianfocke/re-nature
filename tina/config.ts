@@ -1,12 +1,10 @@
 import { defineConfig } from 'tinacms';
 import page from './collections/page';
 import navigation from './collections/navigation';
-import project from './collections/project';
-import design from './collections/design';
 import footer from './collections/footer';
 import story from './collections/story';
 
-const collections = [page, navigation, project, design, footer, story];
+const collections = [page, story,navigation, footer];
 
 export default defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
