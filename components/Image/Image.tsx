@@ -39,7 +39,7 @@ export default function Component(props: PageBlocksImage) {
         direction={'column'}
         justify={'start'}
       >
-        {props.content?.blocks ? <Box pl={config.layout.padding} p={config.layout.padding} maxWidth={{ initial: '100%', md: '400px' }} width={"max-content"}>
+        {props.content?.blocks ? <Box p={config.layout.padding} maxWidth={{ initial: '100%', md: '400px' }} width={"max-content"}>
           {props.content?.blocks.length > 1 ? <Card style={{ boxShadow: config.layout.boxShadow }}>
             {props.content?.blocks?.map((block, j) => {
               return renderBlocks(block, j);

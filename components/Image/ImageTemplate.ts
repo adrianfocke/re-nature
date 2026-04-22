@@ -40,8 +40,6 @@ export default {
           list: true,
           templates: [
             ButtonTemplate,
-            HeadingTemplate,
-            TextTemplate,
             CallToActionTemplate,
           ],
         },
