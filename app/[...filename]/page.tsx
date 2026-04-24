@@ -1,4 +1,5 @@
 import { cookies } from 'next/headers';
+import { permanentRedirect } from 'next/navigation';
 import client from '../../tina/__generated__/client';
 import type { Page } from '../../tina/__generated__/types';
 import type { GenerateMetadataProps } from '../../tina/types';
@@ -7,9 +8,11 @@ import { generateItemMetadata } from '../../utils/generateCollectionMetadata';
 
 export async function generateStaticParams() {
   const pages = await client.queries.pageConnection();
-  const paths = pages.data?.pageConnection?.edges?.map((edge) => ({
-    filename: edge?.node?._sys.breadcrumbs,
-  }));
+  const paths = pages.data?.pageConnection?.edges
+    ?.filter((edge) => edge?.node?.name !== 'home')
+    .map((edge) => ({
+      filename: edge?.node?._sys.breadcrumbs,
+    }));
 
   return paths || [];
 }
@@ -17,6 +20,15 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: GenerateMetadataProps) {
   const language = (await cookies()).get('language')?.value ?? 'en';
   const title = (await params).filename[0];
+
+  if (title === 'home') {
+    return {
+      alternates: {
+        canonical: '/',
+      },
+    };
+  }
+
   return generateItemMetadata(title, language, 'page');
 }
 
@@ -25,6 +37,11 @@ export default async function Page(props: {
 }) {
   // TODO all pages
   const params = await props.params;
+
+  if (params.filename?.[0] === 'home') {
+    permanentRedirect('/');
+  }
+
   const cookieStore = await cookies();
   const language = cookieStore.get('language')?.value ?? 'en';
 
