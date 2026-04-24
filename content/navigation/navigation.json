@@ -23,7 +23,7 @@
   "logoImage": "/uploads/portrait.jpg",
   "settings": {},
   "logo": {
-    "logoImage": "",
+    "logoImage": "/uploads/af.png",
     "link": "/",
     "text_de": "Adrian Focke",
     "text_en": "Adrian Focke"

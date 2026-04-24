@@ -34,8 +34,7 @@ export default function Component(props: ImageComponentProps) {
       ? 'eager'
       : 'lazy';
   const imageSizes = settings.sizes || '100vw';
-
-  const content = (
+  const aspectRatioContent = (
     <AspectRatio
       data-tina-field={tinaField(props.content ?? props)}
       ratio={aspectRatioMap[props.settings?.[aspectRatio]] ?? 16 / 9}
@@ -85,7 +84,11 @@ export default function Component(props: ImageComponentProps) {
       mt={props.settings?.mt ?? '0'}
       mb={props.settings?.mb ?? config.layout.padding}
     >
-      <LinkWrapper link={props.content?.link ?? ''} content={content} />
+      {props.content?.link ? (
+        <LinkWrapper link={props.content.link} content={aspectRatioContent} />
+      ) : (
+        aspectRatioContent
+      )}
     </Box>
   );
 }

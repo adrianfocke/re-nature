@@ -1,13 +1,9 @@
 import {
   Flex,
-  Box,
-  Popover,
-  Button as RadixButton,
   Container,
 } from '@radix-ui/themes';
 import type { NavigationQuery } from '../../tina/__generated__/types';
 import Text from '../Text/Text';
-import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import NextImage from 'next/image';
 import Link from 'next/link';
 import config from '../../utils/config';
@@ -29,7 +25,6 @@ export default function Navigation(props: NavigationQuery['navigation']) {
         justify={"between"}
         gap={{ initial: '0', md: config.layout.padding }}
       >
-        <Flex justify={'between'} width={{initial: "100%", md: "auto"}} align={{ initial: 'center', md: 'start' }}>
           <Link
             href={'/'}
             className='no-line-height'
@@ -42,31 +37,14 @@ export default function Navigation(props: NavigationQuery['navigation']) {
                 width={props.logo.width ?? 40}
                 height={props.logo.height ?? 40}
                 style={{ margin: 0 }}
+                loading='eager'
               />
             ) : (
               <Text {...(props.logo as any)} link='' />
             )}
           </Link>
-          <Box display={{ initial: 'block', md: 'none' }}>
-            <Popover.Root>
-              <Popover.Trigger >
-                <RadixButton color="gray" mt={'1'} aria-label='Open navigation menu'>
-                  <HamburgerMenuIcon />
-                </RadixButton>
-              </Popover.Trigger>
-              <Popover.Content side='bottom' align='end'>
-                <Flex direction='column' gap={config.layout.padding}>
-                  {props.links?.map((link, index) => {
-                    return <Text key={index} {...(link as any)} />;
-                  })}
-                </Flex>
-              </Popover.Content>
-            </Popover.Root>
-          </Box>
-        </Flex>
-
+ 
         <Flex
-          display={{ initial: 'none', md: 'flex' }}
           direction={'row'}
           justify={'between'}
           align={'center'}

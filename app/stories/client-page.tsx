@@ -39,9 +39,11 @@ export default function ClientPage(props: ClientPageProps) {
                 __typename: "PageBlocksImageContentBlocksImage",
                 content: {
                   image: item?.node?.image,
+                  link: "/stories/" + item?.node?._sys.filename,
                 },
                 settings: {
-                  mt: "6"
+                  mt: "6",
+                  sizes: "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw",
                 },
               },
                        {
