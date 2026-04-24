@@ -41,8 +41,8 @@
                 "mt": "6",
                 "mb": "6"
               },
-              "text_de": "Tien Holz Design verbindet Handwerk, Materialgefuehl und klare Formensprache. Ziel war eine Website, die Qualitaet und Haltung sofort sichtbar macht.",
-              "text_en": "Tien Holz Design brings together craftsmanship, material sensitivity, and a clear design language. The goal was a website that makes quality and attitude visible right away.",
+              "text_de": "Sebastian verbindet Handwerk, klare Formsprache und huldigt das Material Holz auf allen Ebenen. Erliebt seine Arbeit und so startete er sein Herzensprojekt Tien Holz Design.",
+              "text_en": "Sebastian combines craftsmanship with clean lines and celebrates wood as a material in every way. He is passionate about his work, which is why he launched his labor of love, Tien Wood Design.",
               "_template": "Heading"
             },
             {
@@ -90,8 +90,8 @@
           },
           "blocks": [
             {
-              "text_de": "Bei diesem Projekt ging es darum, die handwerkliche Tiefe digital praezise zu vermitteln. Die neue Seite sollte Arbeiten, Prozesse und Werte in einer ruhigen, hochwertigen Struktur praesentieren. Ich habe den Aufbau konzipiert und die technische Umsetzung uebernommen.\n\nDurch den modularen Aufbau kann das Team neue Inhalte leicht pflegen und aktuelle Projekte flexibel ergaenzen. So bleibt die Website lebendig und unterstuetzt den Werkstattalltag langfristig.",
-              "text_en": "This project focused on translating deep craftsmanship into a precise digital experience. The new site should present work, process, and values in a calm, high-quality structure. I designed the architecture and handled the technical implementation.\n\nThanks to the modular setup, the team can maintain content easily and add current projects flexibly. This keeps the website alive and supports daily workshop operations over time.",
+              "text_de": "Sebastian ist Tischlermeister mit eigener Werkstatt in Wien, in Zeiten wo alles immer und schnellstens verfgübar ist. Seine Arbeit brilliert und das merkt man.\n\nMeine Fähigkeiten halfen, eine stabile Webseite zu erstellen die seinen Charakter und seine Arbeitsweise repräsentiert – schlicht, ehrlich und modern.",
+              "text_en": "This project focused on translating deep craftsmanship into a precise digital experience. The new site should present work, process, and values in a calm, high-quality structure. I designed the architecture and handled the technical implementation.\n\nMy skills helped create a robust website that reflects his personality and approach—simple, honest, and modern.",
               "_template": "Text"
             }
           ]
@@ -109,8 +109,8 @@
                   "_template": "Heading"
                 },
                 {
-                  "text_de": "Coco hat das Paket \"Bytes only\" gewählt. Vielleicht ist das auch Dein passendes Paket?",
-                  "text_en": "Coco chose the \"Bytes Only\" plan. Maybe that's the right plan for you, too?",
+                  "text_de": "Sebastian hat das Paket \"Bytes only\" gewählt. Vielleicht ist das auch Dein passendes Paket?",
+                  "text_en": "Sebastian chose the \"Bytes Only\" plan. Maybe that's the right plan for you, too?",
                   "_template": "Text"
                 },
                 {

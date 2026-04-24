@@ -32,7 +32,7 @@ export default function ClientPage(props: ClientPageProps) {
   return (
     <LanguageContext.Provider value={props.language || "en"}>
       <Navigation {...data.navigation} />
-        {pages && <Grid items={pages.map((item) => (
+        {pages && <Grid settings={{mt: "6"}} items={pages.map((item) => (
           {
             blocks: [
               {
@@ -42,7 +42,6 @@ export default function ClientPage(props: ClientPageProps) {
                   link: "/stories/" + item?.node?._sys.filename,
                 },
                 settings: {
-                  mt: "6",
                   sizes: "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw",
                 },
               },

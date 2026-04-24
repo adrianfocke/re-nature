@@ -41,16 +41,16 @@
                 "mt": "6",
                 "mb": "6"
               },
-              "text_de": "Valerie entwickelt interdisziplinaere Formate zwischen Theater, Performance und Bildung. Die Website sollte diese Vielschichtigkeit klar, mutig und einladend transportieren.",
-              "text_en": "Valerie develops interdisciplinary formats across theatre, performance, and education. The website needed to communicate this complexity in a clear, bold, and inviting way.",
+              "text_de": "Meine Profession ist es, durch Inszenierungen und interdisziplinäre Kunstformen neue Erzählweisen zu schaffen. Ich verbinde moderne musikalische Konzepte mit Tanz und choreografischen Elementen, um Geschichten auf allen Ebenen zum Leben zu erwecken.",
+              "text_en": "My profession is to create new narrative forms through theatrical productions and interdisciplinary art forms. I combine modern musical concepts with dance and choreographic elements to bring stories to life on every level.",
               "_template": "Heading"
             },
             {
               "settings": {
                 "mb": "6"
               },
-              "text_de": "Valerie, Kuenstlerin und Projektentwicklerin in Wien",
-              "text_en": "Valerie, artist and project developer in Vienna",
+              "text_de": "Valerie, Theater-Regisseurin in Wien",
+              "text_en": "Valerie, theater director in Vienna",
               "_template": "Text"
             }
           ]
@@ -90,8 +90,8 @@
           },
           "blocks": [
             {
-              "text_de": "Der Fokus lag darauf, Valeries kuenstlerische Handschrift digital zu uebersetzen, ohne die Inhalte zu ueberladen. Gemeinsam haben wir eine Struktur entwickelt, die Projekte schnell erklaert und gleichzeitig Raum fuer Tiefe laesst.\n\nIn der Umsetzung wurde besonders auf Lesbarkeit, klare Navigation und flexible Content-Pflege geachtet. So kann die Seite mit neuen Arbeiten mitwachsen und bleibt fuer unterschiedliche Zielgruppen gut zugaenglich.",
-              "text_en": "The focus was to translate Valerie's artistic signature into a digital format without overwhelming the content. Together, we developed a structure that explains projects quickly while still leaving room for depth.\n\nImplementation focused on readability, clear navigation, and flexible content maintenance. This allows the site to grow with new work and remain accessible to different audiences.",
+              "text_de": "Valerie ist Regisseurin und nutzt die Bühne dafür, neue Erzählformen mit modernen Konzepten in Verbindung mit Tanz und choreografischen Elementen, zu zeigen. Sie ist davon überzeugt, dass gutes Theater nur dann entsteht wenn alle Teil haben und ein gemeinsames Gesamtwerk entsteht. Ihr Gesamtwerk ist nun im Web auffindbar, gesammelt und von mir als digitale Biographie bereitgestellt.\n\nValerie ist mit einer ungefähren Idee zu wie die Seite aussehen soll zu mir gekommen. Gemeinsam habe wir erarbeitet was sie aussagen möchte: eine starke Bildsprache mit Platz zur Selbstdarstellung auf eine zugängliche und authentische Art.",
+              "text_en": "Valerie is a director who uses the stage to explore new narrative forms, combining modern concepts with dance and choreographic elements. She firmly believes that great theater can only emerge when everyone contributes and a collective body of work is created. Her body of work is now available online, compiled and presented by me as a digital biography.\n\nValerie came to me with a rough idea of what the site should look like. Together, we worked out what she wanted to convey: a strong visual language with space for self-expression in an accessible and authentic way.",
               "_template": "Text"
             }
           ]
@@ -109,8 +109,8 @@
                   "_template": "Heading"
                 },
                 {
-                  "text_de": "Coco hat das Paket \"Bytes only\" gewählt. Vielleicht ist das auch Dein passendes Paket?",
-                  "text_en": "Coco chose the \"Bytes Only\" plan. Maybe that's the right plan for you, too?",
+                  "text_de": "Valerie hat das Paket \"Bytes only\" gewählt. Vielleicht ist das auch Dein passendes Paket?",
+                  "text_en": "Valerie chose the \"Bytes Only\" plan. Maybe that's the right plan for you, too?",
                   "_template": "Text"
                 },
                 {
