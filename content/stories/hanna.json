@@ -46,6 +46,11 @@
               "_template": "Heading"
             },
             {
+              "link": "https:/www.breathandgrowth.at",
+              "text_de": "breathandgrowth.at",
+              "_template": "Text"
+            },
+            {
               "settings": {
                 "mb": "6"
               },

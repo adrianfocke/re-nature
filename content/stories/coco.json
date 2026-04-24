@@ -46,6 +46,11 @@
               "_template": "Heading"
             },
             {
+              "link": "https:/www.yogamitcoco.at",
+              "text_de": "yogamitcoco.at",
+              "_template": "Text"
+            },
+            {
               "settings": {
                 "mb": "6"
               },

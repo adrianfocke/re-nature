@@ -46,6 +46,11 @@
               "_template": "Heading"
             },
             {
+              "link": "https:/www.valerievoigt.com",
+              "text_de": "valerievoigt.com",
+              "_template": "Text"
+            },
+            {
               "settings": {
                 "mb": "6"
               },
