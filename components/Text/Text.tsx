@@ -28,7 +28,7 @@ export default function Component(
 
   return (
     <Box mt={props.settings?.mt ?? '0'} mb={props.settings?.mb ?? '0'}>
-      <LinkWrapper link={props.link ?? ''} content={content} />
+      <LinkWrapper underlined link={props.link ?? ''} content={content} />
     </Box>
   );
 }

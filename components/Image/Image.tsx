@@ -33,7 +33,8 @@ export default function Component(props: ImageComponentProps) {
     : shouldPreloadUpcomingSlide
       ? 'eager'
       : 'lazy';
-  const imageSizes = settings.sizes || '100vw';
+  const imageSizes =
+    settings.sizes || '(max-width: 768px) 100vw, (max-width: 1280px) 92vw, 1200px';
   const aspectRatioContent = (
     <AspectRatio
       data-tina-field={tinaField(props.content ?? props)}

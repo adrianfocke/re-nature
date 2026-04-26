@@ -1,6 +1,7 @@
+import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
-export function LinkWrapper(props: { link: string; content: React.ReactNode }) {
+export function LinkWrapper(props: { link: string; content: React.ReactNode, underlined?: boolean }) {
   const isExternalLink = props.link.startsWith("http");
 
   if (!props.link) {
@@ -21,6 +22,7 @@ export function LinkWrapper(props: { link: string; content: React.ReactNode }) {
       }
     >
       {props.content}
+      {props.underlined && isExternalLink && <ArrowTopRightIcon />}
     </Link>
   );
 }
