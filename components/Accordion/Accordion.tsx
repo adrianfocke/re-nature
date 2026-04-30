@@ -14,7 +14,7 @@ export default function Component(props: PageBlocksAccordion) {
         <Accordion.Item value={`item-${index + 1}`} key={index}>
           <Accordion.Trigger className={styles.trigger}>
             <Flex justify={'between'} align={'center'}>
-              <Text text_de={block?.title} />
+              <Text text_de={block?.text_de} text_en={block?.text_en} />
               <ChevronDownIcon />
             </Flex>
           </Accordion.Trigger>

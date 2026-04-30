@@ -6,6 +6,7 @@ import {
 import HeadingTemplate from '../Heading/HeadingTemplate';
 import TextTemplate from '../Text/TextTemplate';
 import ButtonTemplate from '../Button/ButtonTemplate';
+import { createIntlField } from '../../tina/templating/special-fields';
 
 export default {
   name: 'Accordion',
@@ -23,11 +24,12 @@ export default {
       type: 'object',
       list: true,
       fields: [
-        {
-          name: 'title',
-          label: 'Title',
-          type: 'string',
-        },
+        ...createIntlField({
+          name: "text",
+          label: "Text",
+          type: "string",
+          ui: { component: "textarea" },
+        }),
         {
           name: 'blocks',
           label: 'Content Blocks',
