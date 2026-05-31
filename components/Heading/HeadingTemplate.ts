@@ -7,6 +7,7 @@ import {
   TextSizeField,
   MarginTopField,
   MarginBottomField,
+  ColorField,
 } from "../../tina/templating/granular-fields";
 
 export default {
@@ -20,6 +21,7 @@ export default {
       fields: [
         MarginTopField,
         MarginBottomField,
+        ColorField,
         ...createResponsiveField(TextSizeField),
       ],
     },

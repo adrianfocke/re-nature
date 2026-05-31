@@ -1,16 +1,16 @@
 import type { Language } from '../tina/templating/special-fields';
 
+interface Author {
+  name: string;
+  url: string;
+}
+
 export default {
   project: {
-    applicationName: 'Adrian Focke',
+    applicationName: 're:nature Vision',
     /** The base URL for the project without the protocol */
-    url: 'adrianfocke.at',
-    authors: [
-      {
-        name: 'Adrian Focke',
-        url: 'adrianfocke.at',
-      },
-    ],
+    url: 'renature.vision',
+    authors: [] as Author[],
   },
   layout: {
     borderRadius: 'var(--radius-4)',
@@ -21,7 +21,7 @@ export default {
       md: '2',
     },
     radius: 'full',
-    radiusVar: 'var(--radius-4)',
+    radiusVar: 'var(--radius-0)',
     textSize: {
       initial: '4',
       xs: "4",

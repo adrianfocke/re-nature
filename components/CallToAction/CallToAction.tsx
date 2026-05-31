@@ -12,7 +12,7 @@ export default function Component(props: PageBlocksCall_To_Action) {
         boxShadow: config.layout.boxShadow,
         background: props.settings?.isPlain
           ? 'var(--gray-3)'
-          : 'radial-gradient(circle, var(--color-background) 0%,var(--accent-10) 100%',
+          : 'var(--accent-10)',
       }}
     >
       <Box pt={config.layout.padding}>

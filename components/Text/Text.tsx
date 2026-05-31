@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { LanguageContext } from '../../utils/context/language';
 import { tinaField } from 'tinacms/dist/react';
 import { findIntlValue } from '../../tina/templating/special-fields';
+import { colorMap } from '../../tina/templating/granular-fields';
 import { LinkWrapper } from '../helpers';
 import config from '../../utils/config';
 import type { ExtraProps } from '../types';
@@ -13,6 +14,8 @@ export default function Component(
 ) {
   const language = useContext(LanguageContext);
   const text = findIntlValue(language, 'text');
+  const selectedColor = props.settings?.color || 'gray';
+  const colorValue = colorMap[selectedColor as keyof typeof colorMap] || 'var(--gray-10)';
 
   const content = (
     <Text
@@ -20,7 +23,10 @@ export default function Component(
         props.extraProps?.tinaFieldDisabled ? undefined : tinaField(props)
       }
       size={config.layout.textSize}
-      style={{ whiteSpace: 'pre-line' }}
+      style={{ 
+        whiteSpace: 'pre-line',
+        color: colorValue
+      }}
     >
       {props[text] ? props[text] : 'Add your text here'}
     </Text>

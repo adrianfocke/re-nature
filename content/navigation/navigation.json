@@ -1,6 +1,6 @@
 {
   "en": {
-    "logo": "Breath & Growth",
+    "logo": "re:nature",
     "links": [
       {
         "label": "Home",
@@ -23,23 +23,29 @@
   "logoImage": "/uploads/portrait.jpg",
   "settings": {},
   "logo": {
-    "logoImage": "/uploads/af.png",
+    "logoImage": "/uploads/logo-renature.png",
+    "width": 100,
     "link": "/",
-    "text_de": "Adrian Focke",
-    "text_en": "Adrian Focke"
+    "text_de": "re:nature",
+    "text_en": "re:nature"
   },
   "links": [
     {
       "settings": {},
       "link": "/about",
-      "text_de": "Über mich",
-      "text_en": "About me"
+      "text_de": "Geschichte",
+      "text_en": "History"
     },
     {
       "settings": {},
-      "link": "/stories",
-      "text_de": "Stories",
-      "text_en": "Stories"
+      "link": "/financing",
+      "text_de": "Finanzierung",
+      "text_en": "Financing"
+    },
+    {
+      "link": "/responsibilities",
+      "text_de": "Aufgaben",
+      "text_en": "Responsibilities"
     }
   ]
 }

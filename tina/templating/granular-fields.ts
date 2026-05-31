@@ -249,4 +249,27 @@ export const CenteredField: Template['fields'][number] = {
   name: 'centered',
   label: centeredFieldLabel[config.tina.language],
   type: 'boolean',
+};
+
+const colorFieldLabel = {
+  en: 'Color',
+  de: 'Farbe',
+};
+export const ColorField: Template['fields'][number] = {
+  name: 'color',
+  label: colorFieldLabel[config.tina.language],
+  type: 'string',
+  options: [
+    { label: 'Grey', value: 'gray' },
+    { label: 'Green', value: 'green' },
+    { label: 'Red', value: 'red' },
+    { label: 'White', value: 'white' },
+  ],
+};
+
+export const colorMap: Record<string, string> = {
+  gray: 'var(--gray-12)',
+  green: '#84b317',
+  red: '#d15618',
+  white: 'var(--color-background)',
 }; 

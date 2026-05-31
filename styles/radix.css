@@ -4,39 +4,74 @@
 .radix-themes {
   --color-background: #f6f5f4;
 }
-:root,
-.light,
-.light-theme {
-  --orange-1: #f4f1f0;
-  --orange-2: #f9eadf;
-  --orange-3: #ffdec2;
-  --orange-4: #ffc994;
-  --orange-5: #ffba78;
-  --orange-6: #ffaa5a;
-  --orange-7: #f69844;
-  --orange-8: #eb7d00;
-  --orange-9: #fc8d0d;
-  --orange-10: #f08200;
-  --orange-11: #ad5400;
-  --orange-12: #5b2d00;
+:root, .light, .light-theme {
+  --orange-1: #fcfdf9;
+  --orange-2: #f7fbf2;
+  --orange-3: #e8f9d1;
+  --orange-4: #d9f4b3;
+  --orange-5: #caeb98;
+  --orange-6: #b9de7f;
+  --orange-7: #a4cd60;
+  --orange-8: #89b821;
+  --orange-9: #84b317;
+  --orange-10: #79a700;
+  --orange-11: #5a7e00;
+  --orange-12: #314212;
 
-  --orange-a1: #912a2805;
-  --orange-a2: #ffd4b555;
-  --orange-a3: #ffdec2;
-  --orange-a4: #ffc994;
-  --orange-a5: #ffba78;
-  --orange-a6: #ffaa5a;
-  --orange-a7: #f67500b8;
-  --orange-a8: #eb7d00;
-  --orange-a9: #ff5900aa;
-  --orange-a10: #f08200;
-  --orange-a11: #ad5400;
-  --orange-a12: #5b2d00;
+  --orange-a1: #80aa0006;
+  --orange-a2: #63b1000d;
+  --orange-a3: #80de002e;
+  --orange-a4: #80db004c;
+  --orange-a5: #7cce0067;
+  --orange-a6: #74be0080;
+  --orange-a7: #6daf009f;
+  --orange-a8: #78ae00de;
+  --orange-a9: #78ac00e8;
+  --orange-a10: #79a700;
+  --orange-a11: #5a7e00;
+  --orange-a12: #213400ed;
 
   --orange-contrast: #fff;
-  --orange-surface: #fae8dacc;
-  --orange-indicator: #fc8d0d;
-  --orange-track: #fc8d0d;
+  --orange-surface: #f5faefcc;
+  --orange-indicator: #84b317;
+  --orange-track: #84b317;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root, .light, .light-theme {
+      --orange-1: oklch(99.2% 0.0055 126.6);
+      --orange-2: oklch(98.2% 0.0127 126.6);
+      --orange-3: oklch(95.9% 0.0564 126.6);
+      --orange-4: oklch(93.2% 0.0896 126.6);
+      --orange-5: oklch(89.7% 0.1132 126.6);
+      --orange-6: oklch(85.3% 0.1293 126.6);
+      --orange-7: oklch(79.5% 0.1441 126.6);
+      --orange-8: oklch(72.4% 0.1754 126.6);
+      --orange-9: oklch(70.7% 0.1754 126.6);
+      --orange-10: oklch(67% 0.1754 126.6);
+      --orange-11: oklch(54.4% 0.1448 126.6);
+      --orange-12: oklch(35.4% 0.0747 126.6);
+
+      --orange-a1: color(display-p3 0.5137 0.6745 0.0235 / 0.024);
+      --orange-a2: color(display-p3 0.4314 0.6745 0.0235 / 0.048);
+      --orange-a3: color(display-p3 0.5255 0.8353 0.0039 / 0.165);
+      --orange-a4: color(display-p3 0.5294 0.8314 0.0039 / 0.275);
+      --orange-a5: color(display-p3 0.502 0.7804 0.0039 / 0.369);
+      --orange-a6: color(display-p3 0.4627 0.7098 0.0039 / 0.459);
+      --orange-a7: color(display-p3 0.4275 0.651 0 / 0.569);
+      --orange-a8: color(display-p3 0.4314 0.6196 0 / 0.746);
+      --orange-a9: color(display-p3 0.4235 0.6078 0 / 0.769);
+      --orange-a10: color(display-p3 0.4 0.5686 0 / 0.808);
+      --orange-a11: color(display-p3 0.2863 0.4078 0 / 0.863);
+      --orange-a12: color(display-p3 0.1176 0.1804 0 / 0.902);
+
+      --orange-contrast: #fff;
+      --orange-surface: color(display-p3 0.9608 0.9804 0.9373 / 0.8);
+      --orange-indicator: oklch(70.7% 0.1754 126.6);
+      --orange-track: oklch(70.7% 0.1754 126.6);
+    }
+  }
 }
 
 @supports (color: color(display-p3 1 1 1)) {

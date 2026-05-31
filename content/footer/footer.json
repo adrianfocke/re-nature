@@ -2,19 +2,7 @@
   "settings": {},
   "links": [
     {
-      "settings": {},
-      "link": "https://signal.me/#eu/ot0DWc_cCOQjXvEt3tihbUpFp2nR0qk6I9QO8gzJCns2tIPXOftM-4x07RvqX9cp",
-      "text_de": "Signal",
-      "text_en": "Signal"
-    },
-    {
-      "settings": {},
-      "link": "https://wa.me/qr/ZR7WP6PAXKLHK1",
-      "text_de": "Whatsapp",
-      "text_en": "Whatsapp"
-    },
-    {
-      "link": "mailto:afocke@pm.me",
+      "link": "mailto:info@renature-institut.org",
       "text_de": "Email",
       "text_en": "Email"
     }

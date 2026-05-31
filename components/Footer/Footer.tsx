@@ -53,7 +53,7 @@ export default function Footer(props: FooterQuery['footer']) {
             <Select.Trigger
               aria-label='Select language'
               style={{
-                borderRadius: config.layout.radiusVar,
+                borderRadius: config.layout.borderRadius,
               }}
             />
             <Select.Content>

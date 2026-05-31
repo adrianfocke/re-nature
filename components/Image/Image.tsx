@@ -39,7 +39,7 @@ export default function Component(props: ImageComponentProps) {
     <AspectRatio
       data-tina-field={tinaField(props.content ?? props)}
       ratio={aspectRatioMap[props.settings?.[aspectRatio]] ?? 16 / 9}
-      style={{ border: "1px solid var(--gray-12)", overflow: 'hidden', borderRadius: config.layout.radiusVar, }}
+      style={{ overflow: 'hidden', borderRadius: config.layout.radiusVar, }}
     
     >
       <NextImage
@@ -63,9 +63,12 @@ export default function Component(props: ImageComponentProps) {
       />
       <Flex
         direction={'column'}
-        justify={'start'}
+        justify={'center'}
+        align={'center'}
+        
+        style={{ position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none' }}
       >
-        {props.content?.blocks ? <Box p={config.layout.padding} maxWidth={{ initial: '100%', md: '400px' }} width={"max-content"}>
+        {props.content?.blocks ? <Box p={config.layout.padding} maxWidth={{ initial: '100%' }} width={"max-content"}  style={{ pointerEvents: 'auto' }}>
           {props.content?.blocks.length > 1 ? <Card style={{ boxShadow: config.layout.boxShadow }}>
             {props.content?.blocks?.map((block, j) => {
               return renderBlocks(block, j);

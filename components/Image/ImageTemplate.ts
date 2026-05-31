@@ -8,6 +8,7 @@ import {
 import { createResponsiveField } from '../../tina/templating/special-fields';
 import ButtonTemplate from '../Button/ButtonTemplate';
 import CallToActionTemplate from '../CallToAction/CallToActionTemplate';
+import HeadingTemplate from '../Heading/HeadingTemplate';
 
 export default {
   name: 'Image',
@@ -39,6 +40,7 @@ export default {
           templates: [
             ButtonTemplate,
             CallToActionTemplate,
+            HeadingTemplate,
           ],
         },
       ],

@@ -1,4 +1,4 @@
-import { Inter as Sans, Instrument_Serif as Serif } from 'next/font/google';
+import { Inter as Sans } from 'next/font/google';
 import localFont from 'next/font/local';
 
 export const sans = Sans({
@@ -9,10 +9,9 @@ export const sans = Sans({
   variable: '--font-sans',
 });
 
-export const serif = Serif({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
+export const serif = localFont({
+  src: '../public/fonts/Stone Sans Semi Bold Regular.woff',
+  style: 'normal',
   variable: '--font-serif',
 });
 
