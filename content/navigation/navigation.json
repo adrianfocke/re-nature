@@ -35,17 +35,6 @@
       "link": "/about",
       "text_de": "Geschichte",
       "text_en": "History"
-    },
-    {
-      "settings": {},
-      "link": "/financing",
-      "text_de": "Finanzierung",
-      "text_en": "Financing"
-    },
-    {
-      "link": "/responsibilities",
-      "text_de": "Aufgaben",
-      "text_en": "Responsibilities"
     }
   ]
 }
