@@ -273,3 +273,18 @@ export const colorMap: Record<string, string> = {
   red: '#d15618',
   white: 'var(--color-background)',
 }; 
+
+
+const textStyleFieldLabel = {
+  en: 'Text Style',
+  de: 'Textstil',
+};
+export const TextStyleField: Template['fields'][number] = {
+  name: 'textStyle',
+  label: textStyleFieldLabel[config.tina.language],
+  type: "string",
+  options: [
+    "italic",
+    "bold",
+  ],
+};

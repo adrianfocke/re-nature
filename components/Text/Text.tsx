@@ -25,7 +25,9 @@ export default function Component(
       size={config.layout.textSize}
       style={{ 
         whiteSpace: 'pre-line',
-        color: colorValue
+        color: colorValue,
+        fontStyle: props.settings?.textStyle === "italic" ? 'italic' : "normal",
+        fontWeight: props.settings?.textStyle === "bold" ? 'bold' : "normal",
       }}
     >
       {props[text] ? props[text] : 'Add your text here'}

@@ -7,6 +7,7 @@ import {
   MarginTopField,
   MarginBottomField,
   ColorField,
+  TextStyleField,
 } from "../../tina/templating/granular-fields";
 
 export default {
@@ -17,7 +18,7 @@ export default {
       name: "settings",
       label: "Settings",
       type: "object",
-      fields: [MarginTopField, MarginBottomField, ColorField],
+      fields: [MarginTopField, MarginBottomField, ColorField, TextStyleField],
     },
     LinkField,
     ...createIntlField({
